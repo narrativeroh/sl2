@@ -1,0 +1,10 @@
+
+<IfModule mod_rewrite.c>
+RewriteBase /SL2/app/
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+#Nice URLs
+RewriteRule ^(.*)/$ $1.php [L]
+</IfModule>

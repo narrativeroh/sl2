@@ -1,0 +1,203 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Anton', sans-serif;
+}
+.text-link {
+  color: #DD2476;
+  text-decoration: none;
+  border-bottom: 1px dotted #DD2476;
+}
+.text-link:hover {
+  color: #FF512F;
+  text-decoration: none;
+  border-bottom: 1px dotted #FF512F;
+}
+
+/* branded buttons and fields */
+.btn {
+  font-family: 'Anton', sans-serif;
+}
+.btn-grad {
+   background-image: linear-gradient(to right, #FF512F 0%, #DD2476  51%, #FF512F  100%);
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;
+ }
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+ .form-switch .form-check-input:focus {
+   --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff99'/%3e%3c/svg%3e");
+   border-color: #FF512F;
+   outline: 0;
+   box-shadow: 0 0 0 0.25rem #FF512F33;
+ }
+ .form-control:focus, .form-select:focus-within {
+   border-color: #FF512F;
+   outline: 0;
+   box-shadow: 0 0 0 0.25rem #FF512F33;
+ }
+ .form-switch .form-check-input:checked {
+    background-color: #DD2476;
+    border-color: #FF512F;
+  }
+  .alert-sl {
+      color: #ffffff;
+      background-color: #DD247633;
+      border-color: #DD2476;
+  }
+
+
+/*  Tom Select Styling for Bootstrap Dark */
+.ts-control {
+    background: none !important;
+    color: #adb5bd !important;
+    border: none !important;
+    font-size: 1rem !important;
+    padding-left: 0px !important;
+    margin-top: -6px !important;
+}
+.ts-control input {
+  color: #eeeeee !important;
+  font-size: 1rem !important;
+}
+.ts-dropdown {
+  background-color: #212529 !important;
+  border: 1px solid #495057 !important;
+  border-radius: 6px !important;
+  color: #adb5bd !important;
+}
+.ts-dropdown .active  {
+  background-color: #495057 !important;
+  color: #eeeeee !important;
+}
+.ts-dropdown .option {
+  font-size: 1rem !important;
+  padding: 10px !important;
+  text-align: left !important;
+}
+.ts-wrapper {
+    --bs-form-select-bg-img:none !important;
+    height: auto !important;
+}
+.multi .ts-control .item {
+  border-radius: 20px;
+  background-color: #343a40 !important;
+  background-size: 200% auto !important;
+  color: #ffffff !important;
+  padding: 6px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+/* Bootstrap override */
+.dropdown-item.active, .dropdown-item:active {
+  color: #ffffff;
+  text-decoration: none;
+  background-image: linear-gradient(to right, #DD2476 0%, #FF512F  100%);
+}
+
+/* Menu Help */
+.navbar {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.navbar-brand,.navbar-brand:hover
+{
+    border-bottom: none;
+}
+.switch-mode {
+  width: 200px;
+  border-radius: 40px;
+  padding: 5px;
+  padding-left: 10px;
+}
+.switch-mode div {
+  font-size: 1rem;
+}
+.switch-mode-Player {
+  background-image: linear-gradient(to right, #DD2476 0%, #FF512F  100%);
+}
+.switch-mode-Organiser {
+  background-image: linear-gradient(to right, #0346AE 0%, #00fbff  100%);
+}
+.form-switch-lg input {
+  height: 1.5rem !important;
+  width: 2.5rem !important;
+  margin-top: 0px;
+}
+.switch-mode .form-text {
+  margin-top: 0px;
+}
+.form-switch-Organiser input {
+  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff'/%3e%3c/svg%3e") !important;
+  border-color: #00fbff;
+  outline: 0;
+  background-color: #0346AE;
+}
+.form-switch-Organiser input:focus {
+  border-color: #0346AE !important;
+  box-shadow: 0 0 0 0.25rem #00fbff33;
+  background-color: #00fbff;
+}
+.menu-avatar {
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+}
+
+/* sidebar */
+.sidebar {
+  position: absolute;
+  height: 100%;
+  width: 300px;
+  margin-left: -240px;
+  padding: 10px;
+  padding-left: 250px;
+  transition: all 0.5s ease-in-out;
+}
+.sidebar .btn-text {
+  visibility: hidden;
+  position: absolute;
+  padding-left: 10px;
+  transition: all 0s ease-in-out;
+  transition-delay: 250ms;
+}
+.sidebar:hover {
+  position: absolute;
+  width: 300px;
+  margin-left: 0px;
+  padding-left: 10px;
+}
+
+.sidebar-player {
+  background: linear-gradient(45deg, #DD2476 0%, #FF512F 100%);
+}
+
+.sidebar-organiser {
+  background: linear-gradient(45deg, #00fbff 0%, #0346AE 100%);
+}
+
+.sidebar:hover .btn-text {
+  visibility: visible;
+  transition: all 0.5s ease-in-out;
+  transition-delay: 250ms;
+}
+
+/* Profile page */
+.profile-pic {
+  height: 200px;
+  border-radius: 100px;
+  width: 200px;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  opacity: 1;
+  background-color: #121212;
+}
+.profile-pic:hover {
+  opacity: 0.5;
+}
