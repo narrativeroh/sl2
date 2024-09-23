@@ -1,13 +1,13 @@
-<div class="container-fluid navbar bg-body-tertiary navbar-expand-lg">
+<div class="container-fluid navbar bg-body-tertiary navbar-expand-md top-bar">
   <div class="container-fluid">
     <a class="navbar-brand" href="<?php echo $pub;?>">
-      <img src="<?php echo $pub;?>assets/SL_Logo.png" alt="Stats & Ladders" width="30"/>
+      <img src="<?php echo $pub;?>assets/SL_Logo.png" alt="Stats & Ladders" height="34"/>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav  me-auto mb-2 mb-md-0">
         <li class="nav-item">
           <div class="switch-mode switch-mode-<?php echo $menu;?>" onClick="Javascript:window.location.href = '<?php echo $pub; if($menu == "Player"){echo "organiser/";}?>';" >
             <div class="float-end form-check form-switch form-switch-lg form-switch-<?php echo $menu;?>">
@@ -17,7 +17,7 @@
           </div>
         </li>
       </ul>
-      <ul class="navbar-nav d-flex d-none d-lg-block">
+      <ul class="navbar-nav d-flex d-none d-md-block">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <?php
@@ -37,13 +37,14 @@
           </ul>
         </li>
       </ul>
-      <ul class="navbar-nav d-flex d-block d-lg-none">
+      <ul class="navbar-nav d-flex d-block d-md-none">
         <li class="nav-item"><a class="nav-link" href="<?php echo $pub;?>profile/">Profile</a></li>
         <li class="nav-item"><a class="nav-link" href="<?php echo $pub;?>logout/">Logout</a></li>
           </ul>
       </div>
 </div>
 </div>
+
 <div class="sidebar sidebar-<?php echo strtolower($menu);?>">
   <div class="sidebar-menu  d-grid gap-2">
     <button class="btn btn-light text-start">
@@ -51,6 +52,6 @@
     </button>
   </div>
 </div>
+
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-12 vh-100">
+    <div class="col-12 vh-100"  style="padding: 16px; padding-left: 76px; padding-top: 80px;">
