@@ -9,9 +9,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <div class="switch-mode switch-mode-<?php echo $menu;?>">
+          <div class="switch-mode switch-mode-<?php echo $menu;?>" onClick="Javascript:window.location.href = '<?php echo $pub; if($menu == "Player"){echo "organiser/";}?>';" >
             <div class="float-end form-check form-switch form-switch-lg form-switch-<?php echo $menu;?>">
-              <input id="menu-mode" class="form-check-input" type="checkbox"<?php if($menu=="Player"){echo " checked";}?> onClick="Javascript:window.location.href = '<?php echo $pub; if($menu == "Player"){echo "organiser/";}?>';" >
+              <input id="menu-mode" class="form-check-input" type="checkbox"<?php if($menu=="Player"){echo " checked";}?> >
             </div>
             <div class="form-text text-white"><?php echo $menu;?> Mode</div>
           </div>
