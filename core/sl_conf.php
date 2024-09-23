@@ -1,13 +1,13 @@
 <?php
 //Database settings
-$db_server = "localhost";												    //db server location
-$db_user = "root";														      //db user
-$db_password = "root";													    //db password
-$db_name = "sl";												            //db name
+$db_server = "localhost";				//db server location
+$db_user = "almostst_dbdave";			 //db user
+$db_password = "+}L+,.S{O5!~";		 //db password
+$db_name = "almostst_sl2";				    //db name
 $pdo = new PDO("mysql:host=$db_server;dbname=$db_name;charset=utf8",$db_user,$db_password);
 
-$pub = "http://localhost:8888/SL2/app/";						          //public root
-$doc = realpath($_SERVER["DOCUMENT_ROOT"])."/SL2/app/";		    //document root
+$pub = "https://almost.statsandladders.com/";				//public root
+$doc = realpath($_SERVER["DOCUMENT_ROOT"])."/";		    //document root
 $secret = "RH-uj.VLb8WF!QxRL2myMWvcDscwr2z2";                 //secret key
 
 //include PHP Mailer functions
