@@ -15,22 +15,31 @@ include $doc."core/sl_menu.php";
 ?>
 
 <!--Top banner-->
-<div style="background: white">
-    <div class="container">
+<div>
+    <div class="container large-banner">
         <div class="row mb-3">
-            <div class="col" style="background: red">
-                Text
+            <div class="col">
+                <h1>NEW TOURNAMENT</h1>
+                <h3>1: SETTINGS</h3>
+                <p>This is where you define the primary settings for your tournament. Dont worry, no one can see your
+                    tournament until you publish it.We strongly recommend our PRESET options for an easy way to get the
+                    basics of your tournament setup.</p>
             </div>
             <div class="col" style="background: green">
                 Blank
             </div>
-            <div class="col" style="background: blue">
-                Buttons
+            <div class="col" style="background: yellow">
+                <h1></h1>
+                <h3>2: REGISTRATION</h3>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-primary me-md-2" type="button">PREVIEW</button>
+                    <button class="btn btn-primary" type="button">PUBLISH & NEXT</button>
+                </div>
             </div>
         </div>
         <!--Progress Indicator-->
-        <div>
-
+        <div style="background: white">
+            This is the progress indicator...
         </div>
     </div>
 </div>
@@ -59,6 +68,10 @@ include $doc."core/sl_menu.php";
 
         <!-- Form fields Column 2 -->
         <div class="col">
+            <div style="height: 100px">
+                Action Bar
+                <button type="button" class="btn btn-primary">Primary</button>
+            </div>
             <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example"
                 tabindex="0">
                 <div class="card text-white bg-dark mb-3">
