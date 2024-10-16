@@ -16,9 +16,9 @@ include $doc."core/sl_menu.php";
 
 <!--Top banner-->
 <div>
-    <div class="container large-banner">
-        <div class="row mb-3">
-            <div class="col">
+    <div class="row mb-3">
+        <div class="container large-banner">
+            <div class="col ">
                 <h1>NEW TOURNAMENT</h1>
                 <h3>1: SETTINGS</h3>
                 <p>This is where you define the primary settings for your tournament. Dont worry, no one can see your
@@ -56,22 +56,24 @@ include $doc."core/sl_menu.php";
                     <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
                     <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
                     <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-4">Item 5</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-4">Item 6</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-4">Item 7</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-4">Item 8</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-4">Item 9</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-4">Item 10</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-5">Item 5</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-6">Item 6</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-7">Item 7</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-8">Item 8</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-9">Item 9</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-10">Item 10</a>
                 </div>
             </div>
         </div>
 
         <!-- Form fields Column 2 -->
+        <!-- Action Bar Card -->
         <div class="col">
             <div style="height: 100px">
                 Action Bar
-                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-primary">Add/Edit TO</button>
             </div>
+            <!-- Presets Card -->
             <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example"
                 tabindex="0">
                 <div class="card text-white bg-dark mb-3">
@@ -93,23 +95,131 @@ include $doc."core/sl_menu.php";
                         </div>
                     </div>
                 </div>
-                <h4 id="list-item-2">Item 2</h4>
-                <p>...</p>
+                <!-- Premium Banner -->
+                <div class="container large-banner" style="height: 200px">
+                    <div class="row align-items-end">
+                        <div class="col">
+                            <h5>GO PREMIUM</h5>
+                            <p>Take your tournament to the next level! Unlock the full Stats & Ladders tournament
+                                features
+                                with 1 simple payment.</p>
+                        </div>
+                        <div class="col"></div>
+                        <div class="col d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type=" button" class="btn btn-primary me-md-2">Learn more</button>
+                            <button type="button" class="btn btn-primary">Go premium</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tournament Info Card -->
+                <div class="card text-white bg-dark mb-3">
+                    <div class="card-header" id="list-item-2">Tournament Info</div>
+                    <div class="card-body">
+                        <!-- Tournament Info Form Column 1 -->
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="">
+                                    <label for="floatingInput">Tournament name</label>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingInput"
+                                                placeholder="dd/mm/yy">
+                                            <label for="floatingInput">Start date</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingInput"
+                                                placeholder="dd/mm/yy">
+                                            <label for="floatingInput">Finish date</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="">
+                                    <label for="floatingInput">Location</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Private Event (Not
+                                        available for public registration)</label>
+                                </div>
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+                                    <label for="floatingTextarea">Summary (Short description)</label>
+                                </div>
+                                <select class="form-select" aria-label="Tournament Format">
+                                    <option selected>SELECT OPTION</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                                <select class="form-select" aria-label="Pairing Method">
+                                    <option selected>SELECT OPTION</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="floatingInput" placeholder="">
+                                    <label for="floatingInput">Number of rounds</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="floatingInput" placeholder="">
+                                    <label for="floatingInput">Round time limit</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Blood Rule (Avoid
+                                        matching players from the same club in round 1 where possible)</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Grudge Matches (Allow
+                                        players to nominate and accept/reject round 1 opponent challenges)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tournament Info Form Column 2 -->
+                        <div class="col">
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="floatingInput" placeholder="">
+                                <label for="floatingInput">Placeholder upload field</label>
+                            </div>
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="" id="floatingTextarea2"
+                                    style="height: 300px"></textarea>
+                                <label for="floatingTextarea2">Long Description</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Game System Card -->
                 <h4 id="list-item-3">Item 3</h4>
                 <p>...</p>
+                <!-- Game System Card Column 1 -->
+
+                <!-- Game System Card Column 2 -->
+
+                <!-- Tickets Card -->
                 <h4 id="list-item-4">Item 4</h4>
                 <p>...</p>
-                <h4 id="list-item-4">Item 5</h4>
+
+
+                <h4 id="list-item-5">Item 5</h4>
                 <p>...</p>
-                <h4 id="list-item-4">Item 6</h4>
+                <h4 id="list-item-6">Item 6</h4>
                 <p>...</p>
-                <h4 id="list-item-4">Item 7</h4>
+                <h4 id="list-item-7">Item 7</h4>
                 <p>...</p>
-                <h4 id="list-item-4">Item 8</h4>
+                <h4 id="list-item-8">Item 8</h4>
                 <p>...</p>
-                <h4 id="list-item-4">Item 9</h4>
+                <h4 id="list-item-9">Item 9</h4>
                 <p>...</p>
-                <h4 id="list-item-4">Item 10</h4>
+                <h4 id="list-item-10">Item 10</h4>
                 <p>...</p>
             </div>
         </div>
