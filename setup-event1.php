@@ -16,8 +16,8 @@ include $doc."core/sl_menu.php";
 
 <!--Top banner-->
 <div>
-    <div class="row mb-3">
-        <div class="container large-banner">
+    <div class="container large-banner">
+        <div class="row mb-3">
             <div class="col ">
                 <h1>NEW TOURNAMENT</h1>
                 <h3>1: SETTINGS</h3>
