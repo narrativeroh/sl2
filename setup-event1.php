@@ -16,7 +16,7 @@ include $doc."core/sl_menu.php";
 
 <!--Top banner-->
 <div>
-    <div class="container large-banner">
+    <div class="container large-banner mb-3">
         <div class="row mb-3">
             <div class="col ">
                 <h1>NEW TOURNAMENT</h1>
@@ -96,7 +96,7 @@ include $doc."core/sl_menu.php";
                     </div>
                 </div>
                 <!-- Premium Banner -->
-                <div class="container large-banner" style="height: 200px">
+                <div class="container large-banner pt-3 pb-3 mb-3">
                     <div class="row align-items-end">
                         <div class="col">
                             <h5>GO PREMIUM</h5>
@@ -152,13 +152,13 @@ include $doc."core/sl_menu.php";
                                     <label for="floatingTextarea">Summary (Short description)</label>
                                 </div>
                                 <select class="form-select" aria-label="Tournament Format">
-                                    <option selected>SELECT OPTION</option>
+                                    <option selected>Select tournament format</option>
                                     <option value="1">One</option>
                                     <option value="2">Two</option>
                                     <option value="3">Three</option>
                                 </select>
                                 <select class="form-select" aria-label="Pairing Method">
-                                    <option selected>SELECT OPTION</option>
+                                    <option selected>Select pairing method</option>
                                     <option value="1">One</option>
                                     <option value="2">Two</option>
                                     <option value="3">Three</option>
@@ -182,17 +182,17 @@ include $doc."core/sl_menu.php";
                                         players to nominate and accept/reject round 1 opponent challenges)</label>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Tournament Info Form Column 2 -->
-                        <div class="col">
-                            <div class="form-floating mb-3">
-                                <input type="number" class="form-control" id="floatingInput" placeholder="">
-                                <label for="floatingInput">Placeholder upload field</label>
-                            </div>
-                            <div class="form-floating">
-                                <textarea class="form-control" placeholder="" id="floatingTextarea2"
-                                    style="height: 300px"></textarea>
-                                <label for="floatingTextarea2">Long Description</label>
+                            <!-- Tournament Info Form Column 2 -->
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="floatingInput" placeholder="">
+                                    <label for="floatingInput">Placeholder upload field</label>
+                                </div>
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="" id="floatingTextarea2"
+                                        style="height: 300px"></textarea>
+                                    <label for="floatingTextarea2">Long Description</label>
+                                </div>
                             </div>
                         </div>
                     </div>
