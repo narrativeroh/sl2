@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../../../core/sl_conf.php';
+include '../../../../sl_conf.php';
 include $doc.'modules/auth/functions/login.php';
 $mysession = session_id();
 $user = authcheck($mysession);

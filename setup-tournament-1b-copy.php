@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'core/sl_conf.php';
+include '../sl_conf.php';
 include $doc.'modules/auth/functions/login.php';
 $mysession = session_id();
 $user = authcheck($mysession);
@@ -19,8 +19,8 @@ include $doc."core/sl_menu.php";
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Configure Tournament</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">  
-  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <style>
 * {box-sizing: border-box}
 
@@ -88,7 +88,7 @@ body{margin-top:20px;}
 
 
 </style>
-  
+
   </head>
 
 <body>
@@ -113,10 +113,10 @@ body{margin-top:20px;}
 
 <!-- stepper: there is a lot of additional code in here because I copied the snippet from a bootstrap site and I didn't bring any JS or data across with it -->
 
-<div class="container">                      
+<div class="container">
     <div class="row text-center justify-content-center mb-5">
         <div class="col-xl-6 col-lg-8">
-            <h2 class="font-weight-bold">Tournament Dashboard</h2>            
+            <h2 class="font-weight-bold">Tournament Dashboard</h2>
         </div>
     </div>
     <div class="row">
@@ -124,7 +124,7 @@ body{margin-top:20px;}
             <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
                 <div class="timeline-step">
                     <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2003">
-                        <div class="inner-circle"></div>                 
+                        <div class="inner-circle"></div>
                         <p class="h6 text-muted mb-0 mb-lg-0">1. Setup Tournament</p>
                     </div>
                 </div>
@@ -159,7 +159,7 @@ body{margin-top:20px;}
 
 
 
-<div>  
+<div>
   <div class="card mb-3">
   <div class="row g-0">
     <div class="col-md-3">
@@ -178,7 +178,7 @@ body{margin-top:20px;}
         <button type="button" class="btn btn-outline-warning btn-sm">tag</button>
         <button type="button" class="btn btn-outline-warning btn-sm">tag</button>
         <button type="button" class="btn btn-outline-warning btn-sm">tag</button>
-        <button type="button" class="btn btn-outline-warning btn-sm">tag</button>      
+        <button type="button" class="btn btn-outline-warning btn-sm">tag</button>
       </div>
     </div>
   </div>
@@ -256,8 +256,8 @@ body{margin-top:20px;}
     <div class="row">
       <div class ="col">
     <p><u>This is where the name of a created ticket will sit [edit icon]</u></p>
-  </div>  
-  <div class = "col">    
+  </div>
+  <div class = "col">
   <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
          <button class="btn btn-grad" type="button" data-bs-toggle="modal" data-bs-target="#addTicketModal">
          Add Ticket</button>
@@ -302,7 +302,7 @@ body{margin-top:20px;}
       <h5 id="list-item-4">Scoring</h5>
       <p>Select which items and percentages will contribute to the total score. Move the presets to this section.</p>
 
-    
+
     <div class="row">
       <div class="col">
         <div class="card text-center">
@@ -338,10 +338,10 @@ body{margin-top:20px;}
             <h5 class="card-title">TO Special</h5>
             <p class="card-text">Custom setup</p>
           </div>
-          
+
         </div>
-        
-</div> 
+
+</div>
 
 
 <p></p>
@@ -360,7 +360,7 @@ body{margin-top:20px;}
           <option value="1">Win/Draw/Loss</option>
           <option value="2">Majors & Minors</option>
           <option value="3">Victory Points 20-0 Differential</option>
-          <option value="4">Total Victory Points</option>          
+          <option value="4">Total Victory Points</option>
         </select>
         <label for="floatingSelect">Scoring</label>
         </div>
@@ -374,7 +374,7 @@ body{margin-top:20px;}
 <br>
 <hr>
 </div>
-      
+
       <!-- <h6>Penalties</h6>
       <p>Penalties (select from a pre-written list of causes of penalty and apply custom points to be deducted e.g. late list submission, incorrect list submission etc)</p>
 
@@ -397,7 +397,7 @@ body{margin-top:20px;}
       <div class="row">
            <div class="col-11">
       <h6>Custom Scoring Secondaries</h6>
-      <p>Add custom scoring items that can be achieved each game.</p>  
+      <p>Add custom scoring items that can be achieved each game.</p>
            </div>
       <div class="col">
       <div class="d-grid d-md-flex justify-content-md-end mb-3">
@@ -462,7 +462,7 @@ body{margin-top:20px;}
         </div>
         </div></td>
     </tr>
-    
+
   </tbody>
 </table>
 </div>
@@ -472,7 +472,7 @@ body{margin-top:20px;}
 <div class="row">
            <div class="col">
       <h6>Penalties</h6>
-      <p>Add any penalties that you would like to apply.</p>  
+      <p>Add any penalties that you would like to apply.</p>
            </div>
       <div class="col">
       <div class="d-grid d-md-flex justify-content-md-end mb-3">
@@ -524,12 +524,12 @@ body{margin-top:20px;}
         </div>
         </div></td>
     </tr>
-    
+
   </tbody>
 </table>
 </div>
 
-      
+
       </div>
       </div>
       <br>
@@ -537,7 +537,7 @@ body{margin-top:20px;}
       <div class="row">
            <div class="col-11">
       <h6>Tournament Bonus Points</h6>
-      <p>Add bonus points for players to be awarded.</p>  
+      <p>Add bonus points for players to be awarded.</p>
            </div>
       <div class="col">
       <div class="d-grid d-md-flex justify-content-md-end mb-3">
@@ -589,14 +589,14 @@ body{margin-top:20px;}
         </div>
         </div></td>
     </tr>
-    
+
   </tbody>
 </table>
 </div>
 
-      
-    
-   
+
+
+
 
 
       <!-- <div>
@@ -620,7 +620,7 @@ body{margin-top:20px;}
 </div>
 </div>
 <div>
-<button type="button" class="btn btn-grad mb-3">Add Custom Bonus</button>      
+<button type="button" class="btn btn-grad mb-3">Add Custom Bonus</button>
       </div> -->
 
 <br>
@@ -635,7 +635,7 @@ body{margin-top:20px;}
             <div class="d-grid d-md-flex justify-content-md-end mb-3">
       <button class="btn btn-grad" type="button">
          +</button>
-      </div>      
+      </div>
 </div>
 
 <div>
@@ -656,8 +656,8 @@ body{margin-top:20px;}
         <label for="floatingSelect">1st</label>
         </div>
         <p>Repeat the above field each time the '+' button is clicked.</p>
-        
-      <p></p>    
+
+      <p></p>
       </div>
       <hr>
       <div class="container">
@@ -675,7 +675,7 @@ body{margin-top:20px;}
       <p>Battleplans</p>
       <p>Put in a number of fields equal to the number of rounds selected with dropdowns to select missions?</p>
       <p></p>
-      
+
         <div class="form-floating mb-3">
           <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 200px"></textarea>
           <label for="floatingTextarea2">FAQ and House Rules</label>
@@ -686,8 +686,8 @@ body{margin-top:20px;}
           <label for="floatingTextarea2">Terrain</label>
         </div>
         </div>
-      <hr>  
-      <div class="container">  
+      <hr>
+      <div class="container">
       <h5 id="list-item-7">Hobby & Sports</h5>
         <div class="form-check">
         <input class="form-check-input" type="checkbox" id="flexCheckDefault">
@@ -725,7 +725,7 @@ body{margin-top:20px;}
       </div>
       </div>
       <p></p>
-      
+
 
 
 
@@ -812,8 +812,8 @@ body{margin-top:20px;}
           <label for="floatingInput">Points</label>
         </div>
       </div>
-      </div>     
-      
+      </div>
+
           <div class="form-check form-switch">
             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
             <label class="form-check-label" for="flexSwitchCheckDefault">Enable favourite opponent voting</label>
@@ -878,7 +878,7 @@ body{margin-top:20px;}
   </label>
 </div>
 <br>
-      <button type="button" class="btn btn-grad">Add Custom Prize</button>            
+      <button type="button" class="btn btn-grad">Add Custom Prize</button>
       <p>Add custom open modal including Title & description fields</p>
       </div>
     </div>
@@ -894,7 +894,7 @@ body{margin-top:20px;}
         <h1 class="modal-title fs-5" id="addTicketModal">Add Ticket</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">      
+      <div class="modal-body">
   <div class="form-floating mb-3">
   <input class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></input>
   <label for="floatingTextarea">Ticket Name</label>
@@ -902,7 +902,7 @@ body{margin-top:20px;}
 <div class="form-floating mb-3">
   <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
   <label for="floatingTextarea2">Description (optional)</label>
-</div>  
+</div>
 <div class="row">
 <div class="col">
   <div class="form-floating mb-3">
@@ -951,20 +951,20 @@ body{margin-top:20px;}
   <div class="col">
     <div class="form-floating mb-3">
     <input type="time" class="form-control" id="floatingInput" placeholder="">
-    <label for="floatingInput">Ticket sale starts</label>  
-    </div>  
+    <label for="floatingInput">Ticket sale starts</label>
+    </div>
   </div>
   <div class="col">
   <div class="form-floating mb-3">
   <input type="date" class="form-control" id="floatingInput" placeholder="">
-  <label for="floatingInput">Ticket sale ends</label>  
-  </div>  
+  <label for="floatingInput">Ticket sale ends</label>
+  </div>
 </div>
 <div class="col">
   <div class="form-floating mb-3">
   <input type="time" class="form-control" id="floatingInput" placeholder="">
-  <label for="floatingInput">Ticket sale ends</label>  
-  </div>  
+  <label for="floatingInput">Ticket sale ends</label>
+  </div>
 </div>
   </div>
 <div class="form-floating">
@@ -988,7 +988,7 @@ body{margin-top:20px;}
         <h1 class="modal-title fs-5" id="addTicketModal">Add Penalty</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">      
+      <div class="modal-body">
       <div class="form-floating mb-3">
   <input class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></input>
   <label for="floatingTextarea">Penalty name</label>
@@ -1012,14 +1012,14 @@ body{margin-top:20px;}
 
 
 
-<script> 
-        
+<script>
+
 
 
 
 
 </script>
-    
+
 
 
 </body>

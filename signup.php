@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'core/sl_conf.php';
+include '../sl_conf.php';
 include $doc.'core/sl_head.php';
 
 include $doc.'modules/auth/functions/regions_select.php';
