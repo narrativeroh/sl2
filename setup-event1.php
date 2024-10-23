@@ -53,7 +53,7 @@ include $doc."core/sl_menu.php";
             <div class="card">
                 <div id="list-example" class="list-group">
                     <a class="list-group-item list-group-item-action" href="#list-item-1">Presets</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-2">Tournament Info</a>
                     <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
                     <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
                     <a class="list-group-item list-group-item-action" href="#list-item-5">Item 5</a>
@@ -99,15 +99,15 @@ include $doc."core/sl_menu.php";
                 <div class="container large-banner pt-3 pb-3 mb-3">
                     <div class="row align-items-end">
                         <div class="col">
-                            <h5>GO PREMIUM</h5>
+                            <h4>GO PREMIUM</h4>
                             <p>Take your tournament to the next level! Unlock the full Stats & Ladders tournament
                                 features
                                 with 1 simple payment.</p>
                         </div>
                         <div class="col"></div>
                         <div class="col d-grid gap-2 d-md-flex justify-content-md-end">
-                            <button type=" button" class="btn btn-primary me-md-2">Learn more</button>
-                            <button type="button" class="btn btn-primary">Go premium</button>
+                            <button type=" button" class="btn btn-dark me-md-2">Learn more</button>
+                            <button type="button" class="btn btn-grad">Go premium</button>
                         </div>
                     </div>
                 </div>
@@ -142,22 +142,24 @@ include $doc."core/sl_menu.php";
                                     <input type="text" class="form-control" id="floatingInput" placeholder="">
                                     <label for="floatingInput">Location</label>
                                 </div>
-                                <div class="form-check form-switch">
+                                <div class="form-check form-switch mb-3">
                                     <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                    <label class="form-check-label" for="flexSwitchCheckDefault">Private Event (Not
-                                        available for public registration)</label>
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Private Event <p>
+                                            <small>Not
+                                                available for public registration</small>
+                                        </p></label>
                                 </div>
-                                <div class="form-floating">
+                                <div class="form-floating mb-3">
                                     <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
                                     <label for="floatingTextarea">Summary (Short description)</label>
                                 </div>
-                                <select class="form-select" aria-label="Tournament Format">
+                                <select class="form-select mb-3" aria-label="Tournament Format">
                                     <option selected>Select tournament format</option>
                                     <option value="1">One</option>
                                     <option value="2">Two</option>
                                     <option value="3">Three</option>
                                 </select>
-                                <select class="form-select" aria-label="Pairing Method">
+                                <select class="form-select mb-3" aria-label="Pairing Method">
                                     <option selected>Select pairing method</option>
                                     <option value="1">One</option>
                                     <option value="2">Two</option>
@@ -171,12 +173,12 @@ include $doc."core/sl_menu.php";
                                     <input type="number" class="form-control" id="floatingInput" placeholder="">
                                     <label for="floatingInput">Round time limit</label>
                                 </div>
-                                <div class="form-check form-switch">
+                                <div class="form-check form-switch mb-3">
                                     <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
                                     <label class="form-check-label" for="flexSwitchCheckDefault">Blood Rule (Avoid
                                         matching players from the same club in round 1 where possible)</label>
                                 </div>
-                                <div class="form-check form-switch">
+                                <div class="form-check form-switch mb-3">
                                     <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
                                     <label class="form-check-label" for="flexSwitchCheckDefault">Grudge Matches (Allow
                                         players to nominate and accept/reject round 1 opponent challenges)</label>
@@ -188,7 +190,7 @@ include $doc."core/sl_menu.php";
                                     <input type="number" class="form-control" id="floatingInput" placeholder="">
                                     <label for="floatingInput">Placeholder upload field</label>
                                 </div>
-                                <div class="form-floating">
+                                <div class="form-floating mb-3">
                                     <textarea class="form-control" placeholder="" id="floatingTextarea2"
                                         style="height: 300px"></textarea>
                                     <label for="floatingTextarea2">Long Description</label>
