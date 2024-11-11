@@ -13,222 +13,204 @@ include $doc.'core/sl_head.php';
 include $doc."core/sl_menu.php";
 
 ?>
+<style>
+.btn-grad-2 {
+   background-image: linear-gradient(to right, #0346AE 0%, #2FA5FF  51%, #0346AE  100%);
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;
+ }
+ .btn-grad-2:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
 
-<!--Top banner-->
-<div>
-    <div class="container large-banner mb-3">
-        <div class="row mb-3">
-            <div class="col ">
-                <h1>NEW TOURNAMENT</h1>
-                <h3>1: SETTINGS</h3>
-                <p>This is where you define the primary settings for your tournament. Dont worry, no one can see your
-                    tournament until you publish it.We strongly recommend our PRESET options for an easy way to get the
-                    basics of your tournament setup.</p>
-            </div>
-            <div class="col" style="background: green">
-                Blank
-            </div>
-            <div class="col" style="background: yellow">
-                <h1></h1>
-                <h3>2: REGISTRATION</h3>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button class="btn btn-primary me-md-2" type="button">PREVIEW</button>
-                    <button class="btn btn-primary" type="button">PUBLISH & NEXT</button>
-                </div>
-            </div>
+.list-group {
+  border: 1px solid #ADB5BD33;
+}
+.list-group .list-group-item {
+  border: none;
+}
+.list-group .list-group-item:hover {
+  background-color: #212529;
+}
+.list-group .list-group-item.active {
+  background-color: #212529;
+  color: #2FA5FF;
+  font-weight: bold;
+}
+.list-group .list-group-item .list-group-inner-item {
+  border-left: 3px solid #212529;
+  padding-left: 10px;
+}
+.list-group .list-group-item.active.text-info .list-group-inner-item {
+  border-left: 3px solid #0dcaf0;
+}
+.list-group .list-group-item.active.text-warning .list-group-inner-item {
+  border-left: 3px solid #ffda6a;
+}
+.list-group .list-group-item.active.text-secondary .list-group-inner-item {
+  border-left: 3px solid #dc3545;
+}
+</style>
+<!--top banner -->
+<div class="d-flex flex-column min-vh-70" style="margin-top: -16px; margin-left: -28px; margin-right: -40px; width: calc(100% + 56px); background-image: linear-gradient(to right, #0346AE 0%, #DD2476 100%); min-height: 50%;">
+  <div class="d-flex flex-grow-1 justify-content-center align-items-center" style="padding: 30px; color: #ffffff;">
+    <div class="container-fluid">
+      <div class="row">
+        <h1>NEW TOURNAMENT #1 <button class="btn btn-dark btn-lg"><i class="bi bi-pencil-square"></i></button></h1>
+        <p></p>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h4>1: SETTINGS</h4>
+          <p>This is where you define the primary settings for your tournament. Dont worry, no one can see your tournament until you publish it.We strongly recommend our PRESET options for an easy way to get the basics of your tournament setup.</p>
+
         </div>
-        <!--Progress Indicator-->
-        <div style="background: white">
-            This is the progress indicator...
+        <div class="col-md-4 text-center" style="color: #ffffff99;">
+          <h1><i class="bi bi-cloud-arrow-up-fill"></i></h1>
+          <p>Upload your event artwork here.</p>
         </div>
+        <div class="col-md-4 text-end">
+          <h4 style="display: inline; background: -webkit-linear-gradient(0deg, #FFFFFFFF 0%, #FFFFFF00 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">2: REGISTRATION</h4>
+          <br/><br/><button class="btn btn-dark">PREVIEW</button> <button class="btn btn-grad-2">PUBLSIH & NEXT</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="progress-stacked">
+            <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+              <div class="progress-bar" style="color: #FFFFFF; background-image: linear-gradient(to right, #0346AE 0%, #DD2476  100%);">SETTINGS</div>
+            </div>
+            <div class="progress" role="progressbar" aria-label="Segment two" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+              <div class="progress-bar bg-dark" style="color: #666666;">REGISTRATION</div>
+            </div>
+            <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+              <div class="progress-bar bg-dark" style="color: #666666;">RUNNING</div>
+            </div>
+            <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+              <div class="progress-bar bg-dark" style="color: #666666;">COMPLETE</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
+<br/>
+<!-- scroll spy and form -->
+<div class="Container-fluid">
+  <div class="row">
+    <div class="col-lg-3 col-md-4"> <!-- Scroll Spy -->
+
+          <nav id="settings-menu" class="flex-column align-items-stretch sticky-top" style="top: 86px;">
+            <div class="list-group bg_dark flex-column">
+              <a class="list-group-item list-group-item-action text-info" href="#presets"><span class="list-group-inner-item"><i class="bi bi-check-circle-fill"></i> PRESETS</span></a>
+              <a class="list-group-item list-group-item-action text-secondary" href="#event-info"><span class="list-group-inner-item"><i class="bi bi-exclamation-circle-fill"></i> EVENT INFO</span></a>
+              <a class="list-group-item list-group-item-action text-secondary" href="#game-system"><span class="list-group-inner-item"><i class="bi bi-exclamation-circle-fill"></i> GAME SYSTEM</span></a>
+              <a class="list-group-item list-group-item-action text-secondary" href="#tickets"><span class="list-group-inner-item"><i class="bi bi-exclamation-circle-fill"></i> TICKETS</span></a>
+              <a class="list-group-item list-group-item-action text-secondary" href="#scoring"><span class="list-group-inner-item"><i class="bi bi-exclamation-circle-fill"></i> SCORING</span></a>
+              <a class="list-group-item list-group-item-action text-secondary" href="#penalties"><span class="list-group-inner-item"><i class="bi bi-exclamation-circle-fill"></i> PENALTIES</span></a>
+              <a class="list-group-item list-group-item-action text-secondary" href="#results"><span class="list-group-inner-item"><i class="bi bi-exclamation-circle-fill"></i> RESULTS</span></a>
+              <a class="list-group-item list-group-item-action text-secondary" href="#rankings"><span class="list-group-inner-item"><i class="bi bi-exclamation-circle-fill"></i> RANKINGS</span></a>
+              <a class="list-group-item list-group-item-action text-secondary" href="#docs"><span class="list-group-inner-item"><i class="bi bi-exclamation-circle-fill"></i> DOCUMENTS</span></a>
+              <a class="list-group-item list-group-item-action text-warning" href="#badges"><span class="list-group-inner-item"><i class="bi bi-info-circle-fill"></i> BADGES</span></a>
+            </div>
+          </nav>
+
+    </div><!-- End Scroll Spy -->
+    <div class="col-lg-9  col-md-8"> <!-- Form -->
+
+      <div class="card"><!-- TOs -->
+        <div class="card-body">
+          <h4 style="display: inline;">Organisers</h4>&nbsp;&nbsp;&nbsp;
+          <img id="menu-avatar"  style="margin-top: -10px; margin-right: -20px;" class="menu-avatar" src="<?php echo $user_url;?>"/>
+          <img id="menu-avatar"  style="margin-top: -10px; margin-right: -20px;" class="menu-avatar" src="<?php echo $pub;?>assets/default-user.png"/>
+          &nbsp;<button class="btn btn-dark" style="margin-top: -10px; margin-left: 20px;"><i class="bi bi-pencil-square"></i></button>
+        </div>
+      </div><br/>
+
+      <div data-bs-spy="scroll" data-bs-target="#settings-menu" data-bs-offset="0" class="settings-menu" tabindex="0">
+
+        <!-- Presets -->
+        <div id="presets" style="float: left; position: absolute; margin-top: -86px;"></div>
+        <div class="card">
+          <div class="card-header"><h4><i class="bi bi-check-circle-fill text-info"></i> PRESETS</h4></div>
+          <div class="card-body"><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/></div>
+        </div><br/>
+
+        <!-- Info -->
+        <div id="event-info" style="float: left; position: absolute; margin-top: -86px;"></div>
+        <div class="card">
+          <div class="card-header"><h4><i class="bi bi-exclamation-circle-fill text-danger"></i> EVENT INFO</h4></div>
+          <div class="card-body"><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/></div>
+        </div><br/>
+
+        <!-- Game System -->
+        <div id="game-system" style="float: left; position: absolute; margin-top: -86px;"></div>
+        <div class="card">
+          <div class="card-header"><h4><i class="bi bi-exclamation-circle-fill text-danger"></i> GAME SYSTEM</h4></div>
+          <div class="card-body"><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/></div>
+        </div><br/>
+
+        <!-- Tickets -->
+        <div id="tickets" style="float: left; position: absolute; margin-top: -86px;"></div>
+        <div class="card">
+          <div class="card-header"><h4><i class="bi bi-exclamation-circle-fill text-danger"></i> TICKETS</h4></div>
+          <div class="card-body"><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/></div>
+        </div><br/>
+
+        <!-- Scoring -->
+        <div id="scoring" style="float: left; position: absolute; margin-top: -86px;"></div>
+        <div class="card">
+          <div class="card-header"><h4><i class="bi bi-exclamation-circle-fill text-danger"></i> SCORING</h4></div>
+          <div class="card-body"><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/></div>
+        </div><br/>
+
+        <!-- Penalties -->
+        <div id="penalties" style="float: left; position: absolute; margin-top: -86px;"></div>
+        <div class="card">
+          <div class="card-header"><h4><i class="bi bi-exclamation-circle-fill text-danger"></i> PENALTIES</h4></div>
+          <div class="card-body"><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/></div>
+        </div><br/>
+
+        <!-- Results -->
+        <div id="results" style="float: left; position: absolute; margin-top: -86px;"></div>
+        <div class="card">
+          <div class="card-header"><h4><i class="bi bi-exclamation-circle-fill text-danger"></i> RESULTS</h4></div>
+          <div class="card-body"><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/></div>
+        </div><br/>
+
+        <!-- RANKINGS -->
+        <div id="rankings" style="float: left; position: absolute; margin-top: -86px;"></div>
+        <div class="card">
+          <div class="card-header"><h4><i class="bi bi-exclamation-circle-fill text-danger"></i> RANKINGS</h4></div>
+          <div class="card-body"><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/></div>
+        </div><br/>
+
+        <!-- DOCUMENTS & FILES -->
+        <div id="docs" style="float: left; position: absolute; margin-top: -86px;"></div>
+        <div class="card">
+          <div class="card-header"><h4><i class="bi bi-exclamation-circle-fill text-danger"></i> DOCUMENTS & FILES</h4></div>
+          <div class="card-body"><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/></div>
+        </div><br/>
+
+        <!-- BADGES -->
+        <div id="badges" style="float: left; position: absolute; margin-top: -86px;"></div>
+        <div class="card">
+          <div class="card-header"><h4><i class="bi bi-info-circle-fill text-warning"></i> BADGES</h4></div>
+          <div class="card-body"><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/></div>
+        </div><br/>
+
+      </div>
+    </div><!-- End Form -->
+  </div>
 </div>
 
-<!-- Form section -->
-<div class="container">
-    <div class="row">
 
-        <!-- Scrollspy menu Column 1 -->
-        <div class="col-2">
-            <div class="card">
-                <div id="list-example" class="list-group">
-                    <a class="list-group-item list-group-item-action" href="#list-item-1">Presets</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-2">Tournament Info</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-5">Item 5</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-6">Item 6</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-7">Item 7</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-8">Item 8</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-9">Item 9</a>
-                    <a class="list-group-item list-group-item-action" href="#list-item-10">Item 10</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Form fields Column 2 -->
-        <!-- Action Bar Card -->
-        <div class="col">
-            <div style="height: 100px">
-                Action Bar
-                <button type="button" class="btn btn-primary">Add/Edit TO</button>
-            </div>
-            <!-- Presets Card -->
-            <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example"
-                tabindex="0">
-                <div class="card text-white bg-dark mb-3">
-                    <div class="card-header" id="list-item-1">Presets</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Dark card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown button
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- Premium Banner -->
-                <div class="container large-banner pt-3 pb-3 mb-3">
-                    <div class="row align-items-end">
-                        <div class="col">
-                            <h4>GO PREMIUM</h4>
-                            <p>Take your tournament to the next level! Unlock the full Stats & Ladders tournament
-                                features
-                                with 1 simple payment.</p>
-                        </div>
-                        <div class="col"></div>
-                        <div class="col d-grid gap-2 d-md-flex justify-content-md-end">
-                            <button type=" button" class="btn btn-dark me-md-2">Learn more</button>
-                            <button type="button" class="btn btn-grad">Go premium</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Tournament Info Card -->
-                <div class="card text-white bg-dark mb-3">
-                    <div class="card-header" id="list-item-2">Tournament Info</div>
-                    <div class="card-body">
-                        <!-- Tournament Info Form Column 1 -->
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingInput" placeholder="">
-                                    <label for="floatingInput">Tournament name</label>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="form-floating mb-3">
-                                            <input type="text" class="form-control" id="floatingInput"
-                                                placeholder="dd/mm/yy">
-                                            <label for="floatingInput">Start date</label>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="form-floating mb-3">
-                                            <input type="text" class="form-control" id="floatingInput"
-                                                placeholder="dd/mm/yy">
-                                            <label for="floatingInput">Finish date</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingInput" placeholder="">
-                                    <label for="floatingInput">Location</label>
-                                </div>
-                                <div class="form-check form-switch mb-3">
-                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                    <label class="form-check-label" for="flexSwitchCheckDefault">Private Event <p>
-                                            <small>Not
-                                                available for public registration</small>
-                                        </p></label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
-                                    <label for="floatingTextarea">Summary (Short description)</label>
-                                </div>
-                                <select class="form-select mb-3" aria-label="Tournament Format">
-                                    <option selected>Select tournament format</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
-                                <select class="form-select mb-3" aria-label="Pairing Method">
-                                    <option selected>Select pairing method</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
-                                <div class="form-floating mb-3">
-                                    <input type="number" class="form-control" id="floatingInput" placeholder="">
-                                    <label for="floatingInput">Number of rounds</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="number" class="form-control" id="floatingInput" placeholder="">
-                                    <label for="floatingInput">Round time limit</label>
-                                </div>
-                                <div class="form-check form-switch mb-3">
-                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                    <label class="form-check-label" for="flexSwitchCheckDefault">Blood Rule (Avoid
-                                        matching players from the same club in round 1 where possible)</label>
-                                </div>
-                                <div class="form-check form-switch mb-3">
-                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                    <label class="form-check-label" for="flexSwitchCheckDefault">Grudge Matches (Allow
-                                        players to nominate and accept/reject round 1 opponent challenges)</label>
-                                </div>
-                            </div>
-                            <!-- Tournament Info Form Column 2 -->
-                            <div class="col">
-                                <div class="form-floating mb-3">
-                                    <input type="number" class="form-control" id="floatingInput" placeholder="">
-                                    <label for="floatingInput">Placeholder upload field</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <textarea class="form-control" placeholder="" id="floatingTextarea2"
-                                        style="height: 300px"></textarea>
-                                    <label for="floatingTextarea2">Long Description</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Game System Card -->
-                <h4 id="list-item-3">Item 3</h4>
-                <p>...</p>
-                <!-- Game System Card Column 1 -->
-
-                <!-- Game System Card Column 2 -->
-
-                <!-- Tickets Card -->
-                <h4 id="list-item-4">Item 4</h4>
-                <p>...</p>
-
-
-                <h4 id="list-item-5">Item 5</h4>
-                <p>...</p>
-                <h4 id="list-item-6">Item 6</h4>
-                <p>...</p>
-                <h4 id="list-item-7">Item 7</h4>
-                <p>...</p>
-                <h4 id="list-item-8">Item 8</h4>
-                <p>...</p>
-                <h4 id="list-item-9">Item 9</h4>
-                <p>...</p>
-                <h4 id="list-item-10">Item 10</h4>
-                <p>...</p>
-            </div>
-        </div>
-
-
-    </div>
-</div>
 <?php
 include $doc."core/sl_container_close.php";
 include $doc.'core/sl_foot.php';
