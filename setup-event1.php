@@ -4,7 +4,7 @@ include '../sl_conf.php';
 include $doc.'modules/auth/functions/login.php';
 $mysession = session_id();
 $user = authcheck($mysession);
-$menu = "Player";
+$menu = "Organiser";
 if(!is_array($user))
 {
   header('Location: '.$pub.'login/');
@@ -61,7 +61,7 @@ include $doc."core/sl_menu.php";
   <div class="d-flex flex-grow-1 justify-content-center align-items-center" style="padding: 30px; color: #ffffff;">
     <div class="container-fluid">
       <div class="row">
-        <h1>NEW TOURNAMENT #1 <button class="btn btn-dark btn-lg"><i class="bi bi-pencil-square"></i></button></h1>
+        <h1>NEW TOURNAMENT</h1>
         <p></p>
       </div>
       <div class="row">
@@ -71,8 +71,6 @@ include $doc."core/sl_menu.php";
 
         </div>
         <div class="col-md-4 text-center" style="color: #ffffff99;">
-          <h1><i class="bi bi-cloud-arrow-up-fill"></i></h1>
-          <p>Upload your event artwork here.</p>
         </div>
         <div class="col-md-4 text-end">
           <h4 style="display: inline; background: -webkit-linear-gradient(0deg, #FFFFFFFF 0%, #FFFFFF00 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">2: REGISTRATION</h4>
