@@ -29,9 +29,6 @@ include $doc."core/sl_menu.php";
                     <h1 class="me-md-2">Event Title</h1>
                 </div>
                 <div class="col-auto">
-                    <i class="bi bi-eye me-md-2"></i>
-                </div>
-                <div class="col-auto">
                     <button type="button" class="btn btn-primary">...</button>
                 </div>
             </div>
@@ -43,28 +40,28 @@ include $doc."core/sl_menu.php";
                     <p>Location</p>
                 </div>
             </div>
-            <h3>Sold tickets</h3>
+            <h4>Sold tickets</h4>
             <div class="row">
                 <div class="col-2">
                     <p>Ticket type</p>
-                    <h1>XX / XX</h1>
+                    <h2>XX / XX</h2>
                 </div>
                 <div class="col-2">
                     <p>Ticket type</p>
-                    <h1>XX / XX</h1>
+                    <h2>XX / XX</h2>
                 </div>
                 <div class="col-2">
                     <p>Ticket type</p>
-                    <h1>XX / XX</h1>
+                    <h2>XX / XX</h2>
                 </div>
-                <div class="col">
+                <div class="col align-items-end">
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                         <button class="btn btn-primary me-md-2" type="button">Promote</button>
                         <button class="btn btn-primary" type="button">Manage</button>
                     </div>
                 </div>
             </div>
-            <div class="card mb-3">
+            <div class="card">
                 <div class="card-body">
                     <p>Status bar</p>
                 </div>
