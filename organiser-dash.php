@@ -14,6 +14,37 @@ include $doc."core/sl_menu.php";
 
 ?>
 <div class="container">
+
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    CTA
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    CTA
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    CTA
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    CTA
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="card mb-3">
         <div class="card-body">
             <p>Sort & filters</p>
