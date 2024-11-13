@@ -41,7 +41,7 @@ include $doc."core/sl_menu.php";
                 </div>
             </div>
             <h4>Sold tickets</h4>
-            <div class="row">
+            <div class="row  mb-3">
                 <div class="col-auto">
                     <p>Ticket type</p>
                     <h2>XX / XX</h2>
