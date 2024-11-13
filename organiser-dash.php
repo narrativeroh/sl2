@@ -15,7 +15,7 @@ include $doc."core/sl_menu.php";
 ?>
 <div class="container">
 
-    <div class="row">
+    <div class="row mb-3">
         <div class="col">
             <div class="card">
                 <div class="card-body">
@@ -94,7 +94,7 @@ include $doc."core/sl_menu.php";
             </div>
             <div class="card">
                 <div class="card-body">
-                    <p>Status bar</p>
+                    Status bar
                 </div>
             </div>
         </div>
