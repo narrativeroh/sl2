@@ -25,9 +25,15 @@ include $doc."core/sl_menu.php";
                 <p>Game System</p>
             </div>
             <div class="row">
-                <h1 class="me-md-2">Event Title</h1>
-                <i class="bi bi-eye me-md-2"></i>
-                <button type="button" class="btn btn-primary">...</button>
+                <div class="col-auto">
+                    <h1 class="me-md-2">Event Title</h1>
+                </div>
+                <div class="col-auto">
+                    <i class="bi bi-eye me-md-2"></i>
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-primary">...</button>
+                </div>
             </div>
             <div class="row">
                 <p>Date</p>
