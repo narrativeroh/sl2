@@ -54,8 +54,8 @@ include $doc."core/sl_menu.php";
                     <p>Ticket type</p>
                     <h2>XX / XX</h2>
                 </div>
-                <div class="col">
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end align-items-end">
+                <div class="col align-self-end">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                         <button class="btn btn-primary me-md-2" type="button">Promote</button>
                         <button class="btn btn-primary" type="button">Manage</button>
                     </div>
