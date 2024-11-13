@@ -36,8 +36,12 @@ include $doc."core/sl_menu.php";
                 </div>
             </div>
             <div class="row">
-                <p>Date</p>
-                <p>Location</p>
+                <div class="col-auto">
+                    <p>Date</p>
+                </div>
+                <div class="col-auto">
+                    <p>Location</p>
+                </div>
             </div>
             <h3>Sold tickets</h3>
             <div class="row">
