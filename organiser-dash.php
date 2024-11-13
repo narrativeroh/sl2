@@ -15,7 +15,9 @@ include $doc."core/sl_menu.php";
 ?>
 <div class="container">
     <div class="card mb-3">
-        <p>Sort & filters</p>
+        <div class="card-body">
+            <p>Sort & filters</p>
+        </div>
     </div>
     <div class="card mb-3">
         <div class="card-body">
@@ -23,15 +25,9 @@ include $doc."core/sl_menu.php";
                 <p>Game System</p>
             </div>
             <div class="row">
-                <div class="col">
-                    <h1>Event Title</h1>
-                </div>
-                <div class="col">
-                    <i class="bi bi-eye"></i>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary">...</button>
-                </div>
+                <h1 class="me-md-2">Event Title</h1>
+                <i class="bi bi-eye me-md-2"></i>
+                <button type="button" class="btn btn-primary">...</button>
             </div>
             <div class="row">
                 <p>Date</p>
@@ -39,25 +35,29 @@ include $doc."core/sl_menu.php";
             </div>
             <h3>Sold tickets</h3>
             <div class="row">
-                <div class="col">
+                <div class="col-2">
+                    <p>Ticket type</p>
+                    <h1>XX / XX</h1>
+                </div>
+                <div class="col-2">
+                    <p>Ticket type</p>
+                    <h1>XX / XX</h1>
+                </div>
+                <div class="col-2">
                     <p>Ticket type</p>
                     <h1>XX / XX</h1>
                 </div>
                 <div class="col">
-                    <p>Ticket type</p>
-                    <h1>XX / XX</h1>
-                </div>
-                <div class="col">
-                    <p>Ticket type</p>
-                    <h1>XX / XX</h1>
-                </div>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button class="btn btn-primary me-md-2" type="button">Promote</button>
-                    <button class="btn btn-primary" type="button">Manage</button>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button class="btn btn-primary me-md-2" type="button">Promote</button>
+                        <button class="btn btn-primary" type="button">Manage</button>
+                    </div>
                 </div>
             </div>
             <div class="card mb-3">
-                <p>Status bar</p>
+                <div class="card-body">
+                    <p>Status bar</p>
+                </div>
             </div>
         </div>
     </div>
