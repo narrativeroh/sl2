@@ -195,7 +195,6 @@ h6 {
 .sidebar-organiser {
   background: linear-gradient(45deg, #00fbff 0%, #0346ae 100%);
 }
-
 .sidebar:hover .btn-text {
   visibility: visible;
   transition: all 0.5s ease-in-out;
@@ -220,4 +219,55 @@ h6 {
 
 .large-banner {
   background: linear-gradient(45deg, #0346ae 0%, #dd2476 100%);
+}
+
+/* tournament setup */
+.btn-grad-2 {
+   background-image: linear-gradient(to right, #0346AE 0%, #2FA5FF  51%, #0346AE  100%);
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;
+ }
+ .btn-grad-2:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+.list-group {
+  border: 1px solid #ADB5BD33;
+}
+.list-group .list-group-item {
+  border: none;
+}
+.list-group .list-group-item:hover {
+  background-color: #212529;
+}
+.list-group .list-group-item.active {
+  background-color: #212529;
+  color: #2FA5FF;
+  font-weight: bold;
+}
+.list-group .list-group-item .list-group-inner-item {
+  border-left: 3px solid #212529;
+  padding-left: 10px;
+}
+.list-group .list-group-item.active.text-info .list-group-inner-item {
+  border-left: 3px solid #0dcaf0;
+}
+.list-group .list-group-item.active.text-warning .list-group-inner-item {
+  border-left: 3px solid #ffda6a;
+}
+.list-group .list-group-item.active.text-secondary .list-group-inner-item {
+  border-left: 3px solid #dc3545;
+}
+
+.organiser-progress-banner {
+  margin-top: -16px;
+  margin-left: -28px;
+  margin-right: -40px;
+  width: calc(100% + 56px);
+  min-height: 50%;
 }

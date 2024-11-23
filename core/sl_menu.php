@@ -46,11 +46,11 @@
 </div>
 
 <div class="sidebar sidebar-<?php echo strtolower($menu);?>">
-  <div class="sidebar-menu  d-grid gap-2">
-    <button class="btn btn-light text-start">
-      <i class="bi bi-speedometer"></i> <span class="btn-text">Dashboard</span>
-    </button>
-  </div>
+  <div class="sidebar-menu  d-grid gap-2 mb-2">
+      <button class="btn btn-light text-start">
+        <i class="bi bi-speedometer"></i> <span class="btn-text">Dashboard</span>
+      </button>
+    </div>
 </div>
 
 <div class="container-fluid">
