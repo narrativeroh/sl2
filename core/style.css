@@ -271,3 +271,25 @@ h6 {
   width: calc(100% + 56px);
   min-height: 50%;
 }
+
+.countdown {
+  font-size: 4rem;
+}
+.countdown-sm {
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+/* PREMIUM  */
+.btn-grad-3 {
+   background-image: linear-gradient(to right, #FF512F 0%, #EDA00A  51%, #FF512F  100%);
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;
+ }
+ .btn-grad-3:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }

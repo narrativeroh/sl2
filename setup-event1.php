@@ -75,7 +75,6 @@ include $doc."core/sl_menu.php";
               <a class="list-group-item list-group-item-action text-warning" href="#badges"><span class="list-group-inner-item"><i class="bi bi-info-circle-fill"></i> BADGES</span></a>
             </div>
           </nav>
-
     </div><!-- End Scroll Spy -->
     <div class="col-lg-9  col-md-8"> <!-- Form -->
 
@@ -95,6 +94,16 @@ include $doc."core/sl_menu.php";
         <div class="card">
           <div class="card-header"><h4><i class="bi bi-check-circle-fill text-info"></i> PRESETS</h4></div>
           <div class="card-body"><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/></div>
+        </div><br/>
+
+        <!-- Go Premium -->
+        <div id="Premium" style="float: left; position: absolute; margin-top: -86px;"></div>
+        <div class="card">
+          <div class="card-body p-5 text-white" style="background-image: linear-gradient(to right, #0346AE 0%, #DD2476 100%);">
+            <h3>GO PREMIUM</h3>
+            <button class="btn btn-grad-3 btn-lg float-end">GO PREMIUM</button>
+            <p>Take your tournament to the next level! Unlock the full Stats & Ladders tournament features with 1 simple payment.</p>
+          </div>
         </div><br/>
 
         <!-- Info -->
