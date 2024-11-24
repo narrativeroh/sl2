@@ -4,7 +4,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Anton", sans-serif;
+  font-family: "Urbanist", sans-serif;
 }
 .text-link {
   color: #dd2476;
@@ -19,7 +19,7 @@ h6 {
 
 /* branded buttons and fields */
 .btn {
-  font-family: "Anton", sans-serif;
+  font-family: "Urbanist", sans-serif;
 }
 .btn-grad {
   background-image: linear-gradient(
@@ -277,7 +277,7 @@ h6 {
 }
 .countdown-sm {
   font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Urbanist', sans-serif;
 }
 /* PREMIUM  */
 .btn-grad-3 {

@@ -91,28 +91,25 @@ include $doc."core/sl_menu.php";
           <table class="table table-striped">
             <thead>
               <tr>
-                <th class="text-white" style="padding-bottom: 20px;">TICKETS</th>
-                <th class="text-end text-white" style="padding-bottom: 20px;">40/80</th>
-                <th width="50%" style="padding-bottom: 20px;">
-                  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style=" height: 28px;">
-                    <div class="progress-bar" style="width: 70%; background-color: #2FA5FF;"></div>
-                  </div>
+                <th class="text-white"><h4>Tickets</h4></th>
+                <th colspan="2" class="text-end" style="padding-bottom: 10px;">
+                  <button class="btn btn-outline-secondary"><i class="bi bi-pencil-square"></i></button>
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td style="font-size: 0.75rem;">Standard</td>
-                <td  style="font-size: 0.75rem;" class="text-end">30/40</td>
-                <td>
+                <td>Standard</td>
+                <td class="text-end">30/40</td>
+                <td width="50%">
                   <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style=" height: 20px;">
                     <div class="progress-bar" style="width: 75%; background-color: #DD2476;"></div>
                   </div>
                 </td>
               </tr>
               <tr>
-                <td style="font-size: 0.75rem;">Club</td>
-                <td  style="font-size: 0.75rem;" class="text-end">25/39</td>
+                <td>Club</td>
+                <td class="text-end">25/39</td>
                 <td>
                   <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style=" height: 20px;">
                     <div class="progress-bar" style="width: 64%; background-color: #FF512F;"></div>
@@ -120,11 +117,83 @@ include $doc."core/sl_menu.php";
                 </td>
               </tr>
               <tr>
-                <td style="font-size: 0.75rem;">VIP</td>
-                <td  style="font-size: 0.75rem;" class="text-end">1/1</td>
+                <td>VIP</td>
+                <td class="text-end">1/1</td>
                 <td>
                   <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style=" height: 20px;">
                     <div class="progress-bar" style="width: 100%; background-color: #EDA00A;"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-white" style="font-weight: bold;">TOTAL</td>
+                <td class="text-white text-end" style="font-weight: bold;">56/80</td>
+                <td>
+                  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style=" height: 20px;">
+                    <div class="progress-bar" style="width: 70%; background-color: #2FA5FF;"></div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div><br/>
+
+      <!-- GRUDGES -->
+      <div class="card">
+        <div class="card-body">
+
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th class="text-white"><h4>Grudges</h4></th>
+                <th colspan="3" class="text-end" style="padding-bottom: 10px;">
+                  <button class="btn btn-outline-secondary"><i class="bi bi-plus"></i></button>
+                </th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td width="40%">
+                  <p style="line-height: 16px;" class="text-white">Sample Name</p><p style="line-height: 10px; margin: 0px; margin-top: -10px; font-size: 0.75rem;">sample club</p>
+                </td>
+                <td class="text-center">v</td>
+                <td width="40%">
+                  <p style="line-height: 16px;" class="text-white">Sample Name</p><p style="line-height: 10px; margin: 0px; margin-top: -10px; font-size: 0.75rem;">sample club</p>
+                </td>
+                <td>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td width="40%">
+                  <p style="line-height: 16px;" class="text-white">Sample Name</p><p style="line-height: 10px; margin: 0px; margin-top: -10px; font-size: 0.75rem;">sample club</p>
+                </td>
+                <td class="text-center">v</td>
+                <td width="40%">
+                  <p style="line-height: 16px;" class="text-white">Sample Name</p><p style="line-height: 10px; margin: 0px; margin-top: -10px; font-size: 0.75rem;">sample club</p>
+                </td>
+                <td>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td width="40%">
+                  <p style="line-height: 16px;" class="text-white">Sample Name</p><p style="line-height: 10px; margin: 0px; margin-top: -10px; font-size: 0.75rem;">sample club</p>
+                </td>
+                <td class="text-center">v</td>
+                <td width="40%">
+                  <p style="line-height: 16px;" class="text-white">Sample Name</p><p style="line-height: 10px; margin: 0px; margin-top: -10px; font-size: 0.75rem;">sample club</p>
+                </td>
+                <td>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                   </div>
                 </td>
               </tr>
