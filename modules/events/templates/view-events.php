@@ -16,7 +16,7 @@
       </form>
     </div>
     <div class="col-md-3">
-      <a class="btn btn-lg btn-grad-2" href="" style="width: 100%;">+ new event</a>
+      <a class="btn btn-lg btn-grad-2" href="" style="width: 100%;">+ New Event</a>
     </div>
   </div>
 </div>
@@ -27,58 +27,22 @@
 
   <div class="col-md-4 col-lg-3">
     <div class="card">
-      <img src="<?php echo $pub;?>uploads/8/samplebanner.jpg" class="card-img-top" alt="">
-      <div class="card-body text-center">
-        <h5 class="card-title">Event Name</h5>
-        <p class="card-text">Info about the event, what stage it is at, etc</p>
-        <a href="#" class="btn btn-grad-2">MANAGE EVENT</a>
+      <div class="card-image text-center" style=" height: 150px; background-image: url('<?php echo $pub;?>uploads/8/samplebanner.jpg');background-size: cover;">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-white">Event Name</h5>
+        <p style="line-height: 0.7rem; font-size: 0.7rem; color: #999999;">Jan 25 - Jan 27, 2024</p>
+        <p class="card-text text-warning">This event is pending</p>
+        <div>
+          <div class="float-start" style="margin-right: 10px; background-color: #ffcc00; border-radius: 20px; color: #000; width: 30px; height: 30px; text-align: center;"><img src="<?php echo $pub;?>assets/aos.svg" width="20"/></div>
+          <div class="float-start" style="padding-top: 4px;">0/0 Tickets Sold</div>
+        </div>
+        <a href="#" class="float-end btn btn-grad-2">Manage</a>
       </div>
     </div>
   </div>
 
-  <div class="col-md-4 col-lg-3">
-    <div class="card">
-      <img src="<?php echo $pub;?>uploads/8/samplebanner.jpg" class="card-img-top" alt="">
-      <div class="card-body text-center">
-        <h5 class="card-title">Event Name</h5>
-        <p class="card-text">Info about the event, what stage it is at, etc</p>
-        <a href="#" class="btn btn-grad-2">MANAGE EVENT</a>
-      </div>
-    </div>
-  </div>
 
-  <div class="col-md-4 col-lg-3">
-    <div class="card">
-      <img src="<?php echo $pub;?>uploads/8/samplebanner.jpg" class="card-img-top" alt="">
-      <div class="card-body text-center">
-        <h5 class="card-title">Event Name</h5>
-        <p class="card-text">Info about the event, what stage it is at, etc</p>
-        <a href="#" class="btn btn-grad-2">MANAGE EVENT</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 col-lg-3">
-    <div class="card">
-      <img src="<?php echo $pub;?>uploads/8/samplebanner.jpg" class="card-img-top" alt="">
-      <div class="card-body text-center">
-        <h5 class="card-title">Event Name</h5>
-        <p class="card-text">Info about the event, what stage it is at, etc</p>
-        <a href="#" class="btn btn-grad-2">MANAGE EVENT</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 col-lg-3">
-    <div class="card">
-      <img src="<?php echo $pub;?>uploads/8/samplebanner.jpg" class="card-img-top" alt="">
-      <div class="card-body text-center">
-        <h5 class="card-title">Event Name</h5>
-        <p class="card-text">Info about the event, what stage it is at, etc</p>
-        <a href="#" class="btn btn-grad-2">MANAGE EVENT</a>
-      </div>
-    </div>
-  </div>
 
 </div>
 

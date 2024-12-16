@@ -29,7 +29,6 @@ h6 {
     #ff512f 100%
   );
   text-align: center;
-  text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
   color: white;
@@ -273,7 +272,6 @@ h6 {
 .btn-grad-2 {
    background-image: linear-gradient(to right, #0346AE 0%, #2FA5FF  51%, #0346AE  100%);
    text-align: center;
-   text-transform: uppercase;
    transition: 0.5s;
    background-size: 200% auto;
    color: white;
@@ -331,7 +329,6 @@ h6 {
 .btn-grad-3 {
    background-image: linear-gradient(to right, #FF512F 0%, #EDA00A  51%, #FF512F  100%);
    text-align: center;
-   text-transform: uppercase;
    transition: 0.5s;
    background-size: 200% auto;
    color: white;
