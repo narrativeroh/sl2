@@ -45,12 +45,49 @@
 </div>
 </div>
 
-<div class="sidebar sidebar-<?php echo strtolower($menu);?>">
+<div class="sidebar d-none d-md-block sidebar-<?php echo strtolower($menu);?>">
   <div class="sidebar-menu  d-grid gap-2 mb-2">
-      <button class="btn btn-light text-start">
+      <button class="btn btn-outline-light text-start">
         <i class="bi bi-speedometer"></i> <span class="btn-text">Dashboard</span>
       </button>
+
+      <button class="btn btn-light text-start">
+        <i class="bi bi-calendar"></i> <span class="btn-text">Events</span>
+      </button>
+      <div class="sidebar-submenu active">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a href="#">New Event</a></li>
+          <li class="nav-item"><a href="#">All Events</a></li>
+        </ul>
+      </div>
+
     </div>
+</div>
+
+<div class="d-block d-md-none accordion accordion-flush" style="margin-top: 60px;" id="sidebar-menu">
+  <div class="accordion-item  sidebar-<?php echo strtolower($menu);?>">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed text-dark" style="background: none;" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-menu-inner" aria-expanded="false" aria-controls="collapseTwo">MENU</button>
+    </h2>
+    <div id="sidebar-menu-inner" class="accordion-collapse collapse" data-bs-parent="#sidebar-menu">
+      <div class="accordion-body">
+        <button class="btn btn-lg btn-outline-light text-start d-block" style="width: 100%; margin-bottom: 10px;">
+          <i class="bi bi-speedometer"></i> <span class="btn-text">Dashboard</span>
+        </button>
+
+        <button class="btn btn-lg btn-light text-start d-block" style="width: 100%; margin-bottom: 10px;">
+          <i class="bi bi-calendar"></i> <span class="btn-text">Events</span>
+        </button>
+        <div class="mobile-sidebar-submenu active">
+          <ul class="nav flex-column">
+            <li class="nav-item"><a href="#">New Event</a></li>
+            <li class="nav-item"><a href="#">All Events</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="container-fluid">

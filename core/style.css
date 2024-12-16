@@ -92,6 +92,7 @@ h6 {
 .ts-wrapper {
   --bs-form-select-bg-img: none !important;
   height: auto !important;
+  padding-bottom: 0px !important;
 }
 .multi .ts-control .item {
   border-radius: 20px;
@@ -176,6 +177,9 @@ h6 {
   padding-left: 250px;
   transition: all 0.5s ease-in-out;
 }
+.sidebar .btn {
+  z-index: 99998;
+}
 .sidebar .btn-text {
   visibility: hidden;
   position: absolute;
@@ -187,7 +191,6 @@ h6 {
   margin-left: 0px;
   padding-left: 10px;
 }
-
 .sidebar-player {
   background: linear-gradient(45deg, #dd2476 0%, #ff512f 100%);
 }
@@ -197,9 +200,54 @@ h6 {
 }
 .sidebar:hover .btn-text {
   visibility: visible;
+}
+.sidebar:hover .sidebar-submenu {
+  visibility: visible;
+  position: relative;
   transition: all 0.5s ease-in-out;
   transition-delay: 250ms;
 }
+.sidebar-submenu {
+  visibility: hidden;
+  position: absolute;
+  margin-top: -12px;
+  border-radius: 0px 0px 12px 12px;
+  padding: 10px;
+}
+.mobile-sidebar-submenu {
+  margin-top: -12px;
+  border-radius: 0px 0px 12px 12px;
+  padding: 10px;
+}
+
+.sidebar-submenu.active, .mobile-sidebar-submenu.active {
+  background: #ffffff99;
+}
+
+.sidebar-submenu .nav, .mobile-sidebar-submenu .nav {
+  padding-left: 10px;
+}
+
+
+.sidebar-submenu .nav a {
+  color: #333333;
+  text-decoration: none;
+  padding: 5px;
+}
+.sidebar-submenu .nav-item, .mobile-sidebar-submenu .nav-item {
+  padding: 5px;
+}
+.mobile-sidebar-submenu .nav-item a {
+  color: #333333;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.sidebar-submenu .nav a:hover,  .mobile-sidebar-submenu .nav a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
 
 /* Profile page */
 .profile-pic {
