@@ -23,15 +23,64 @@
 <br/>
 <div class="container-fluid">
 
+<div class="row">
+
   <div class="col-md-4 col-lg-3">
     <div class="card">
       <img src="<?php echo $pub;?>uploads/8/samplebanner.jpg" class="card-img-top" alt="">
-  <div class="card-body text-center">
-    <h5 class="card-title">Event Name</h5>
-    <p class="card-text">Info about the event, what stage it is at, etc</p>
-    <a href="#" class="btn btn-grad-2">MANAGE EVENT</a>
-  </div>
+      <div class="card-body text-center">
+        <h5 class="card-title">Event Name</h5>
+        <p class="card-text">Info about the event, what stage it is at, etc</p>
+        <a href="#" class="btn btn-grad-2">MANAGE EVENT</a>
+      </div>
     </div>
   </div>
+
+  <div class="col-md-4 col-lg-3">
+    <div class="card">
+      <img src="<?php echo $pub;?>uploads/8/samplebanner.jpg" class="card-img-top" alt="">
+      <div class="card-body text-center">
+        <h5 class="card-title">Event Name</h5>
+        <p class="card-text">Info about the event, what stage it is at, etc</p>
+        <a href="#" class="btn btn-grad-2">MANAGE EVENT</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 col-lg-3">
+    <div class="card">
+      <img src="<?php echo $pub;?>uploads/8/samplebanner.jpg" class="card-img-top" alt="">
+      <div class="card-body text-center">
+        <h5 class="card-title">Event Name</h5>
+        <p class="card-text">Info about the event, what stage it is at, etc</p>
+        <a href="#" class="btn btn-grad-2">MANAGE EVENT</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 col-lg-3">
+    <div class="card">
+      <img src="<?php echo $pub;?>uploads/8/samplebanner.jpg" class="card-img-top" alt="">
+      <div class="card-body text-center">
+        <h5 class="card-title">Event Name</h5>
+        <p class="card-text">Info about the event, what stage it is at, etc</p>
+        <a href="#" class="btn btn-grad-2">MANAGE EVENT</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 col-lg-3">
+    <div class="card">
+      <img src="<?php echo $pub;?>uploads/8/samplebanner.jpg" class="card-img-top" alt="">
+      <div class="card-body text-center">
+        <h5 class="card-title">Event Name</h5>
+        <p class="card-text">Info about the event, what stage it is at, etc</p>
+        <a href="#" class="btn btn-grad-2">MANAGE EVENT</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 
 </div>
