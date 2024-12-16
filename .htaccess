@@ -1,5 +1,5 @@
 <IfModule mod_rewrite.c>
-RewriteBase /sl2-live/
+RewriteBase /
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
