@@ -247,6 +247,19 @@ h6 {
   text-decoration: none;
 }
 
+.sidebar-hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-color: #ffffff;
+  opacity: 1;
+}
+.sidebar-i img {
+  filter: invert(100%) sepia(11%) saturate(2%) hue-rotate(234deg) brightness(107%) contrast(101%);
+}
+.btn:hover .sidebar-i img {
+  filter: invert(0%) sepia(9%) saturate(7500%) hue-rotate(240deg) brightness(99%) contrast(95%);
+}
+
 
 /* Profile page */
 .profile-pic {

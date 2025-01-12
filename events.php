@@ -19,6 +19,7 @@ if(!empty($_GET['e']))
 }
 else {
   include $doc."modules/events/functions/game_systems_filter.php";
+  include $doc."modules/events/functions/edit_event.php";
   include $doc."modules/events/templates/view-events.php";
 }
 ?>
