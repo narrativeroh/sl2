@@ -3,7 +3,7 @@
   <div class="d-flex flex-grow-1 justify-content-center align-items-center p-5 text-white">
     <div class="container-fluid">
       <div class="row">
-        <h1>NEW TOURNAMENT</h1>
+        <h1><?php echo $event['event_name'];?></h1>
         <p></p>
       </div>
       <div class="row">

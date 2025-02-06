@@ -36,22 +36,38 @@
 
 <div class="row">
 
-  <div class="col-md-4 col-lg-3">
-    <div class="card">
-      <div class="card-image text-center" style=" height: 150px; background-image: url('<?php echo $pub;?>uploads/8/samplebanner.jpg');background-size: cover;">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title text-white">Sigmar Smash - AoS Tournament</h5>
-        <p style="line-height: 0.7rem; font-size: 0.7rem; color: #999999;">Victoria, Australia<br/>Jan 25 - Jan 27, 2024</p>
-        <p class="card-text text-warning">This event is pending</p>
-        <div>
-          <div class="float-start" style="margin-right: 10px; background-color: #ffcc00; border-radius: 20px; color: #000; width: 30px; height: 30px; text-align: center;"><img src="<?php echo $pub;?>assets/aos.svg" width="20"/></div>
-          <div class="float-start" style="padding-top: 4px;">0/30 Places</div>
+  <?php
+  //get events
+  $events = getEvents();
+  if($events<>"")
+  {
+    foreach($events as $ev)
+    {
+      ?>
+      <div class="col-md-4 col-lg-3">
+        <div class="card">
+          <div class="card-image text-center" style=" height: 150px; background-image: url('<?php echo $pub;?>uploads/8/samplebanner.jpg');background-size: cover;">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-white"><?php echo $ev['event_name'];?></h5>
+            <p style="line-height: 0.7rem; font-size: 0.7rem; color: #999999;">Victoria, Australia<br/>Jan 25 - Jan 27, 2024</p>
+            <?php
+            if($ev['event_status']==1){echo "<p class=\"card-text text-warning\">This event is pending</p>";}
+            ?>
+            <div>
+              <div class="float-start" style="margin-right: 10px; background-color: #ffcc00; border-radius: 20px; color: #000; width: 30px; height: 30px; text-align: center;"><img src="<?php echo $pub;?>assets/aos.svg" width="20"/></div>
+              <div class="float-start" style="padding-top: 4px;">0/30 Places</div>
+            </div>
+            <a href="<?php echo $pub;?>my-events/?e=<?php echo $ev['event_hash'];?>" class="float-end btn btn-grad-2">Manage</a>
+          </div>
         </div>
-        <a href="#" class="float-end btn btn-grad-2">Manage</a>
       </div>
-    </div>
-  </div>
+      <?php
+    }
+  }
+
+  ?>
+
 
 
 
@@ -74,7 +90,7 @@ function newEvent()
       {
           if(data != "err")
           {
-            $(location).prop('href', '<?php echo $pub;?>events/?e='+data);
+            $(location).prop('href', '<?php echo $pub;?>my-events/?e='+data);
           }
           else
           {
