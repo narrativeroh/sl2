@@ -63,17 +63,17 @@
             $eventname = $row['event_name'];
             $eventname = (strlen($eventname) > 28) ? substr($eventname,0,25).'...' : $eventname;
             ?>
-            <button class="btn btn-light text-start text-light" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://localhost:8888/sl2-live/uploads/8/samplebanner.jpg');background-size: cover;">
+            <a href="<?php echo $pub;?>my-events/?e=<?php echo $row['event_hash'];?>" class="btn btn-light text-start text-light" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://localhost:8888/sl2-live/uploads/8/samplebanner.jpg');background-size: cover;">
               <span><?php echo substr($eventname,0,2);?></span> <span class="btn-text" style="padding-left: 0px;"><?php echo substr($eventname,2,28);?></span>
-            </button>
+            </a>
             <?php
           }
           echo "<hr class=\"sidebar-hr\"/>";
         }
       ?>
-      <button class="btn <?php if($section == "events"){ echo "btn-light";}else{echo "btn-outline-light";}?> text-start">
+      <a class="btn <?php if($section == "events"){ echo "btn-light";}else{echo "btn-outline-light";}?> text-start" href="<?php echo $pub;?>my-events/">
         <i class="<?php if($section == "events"){ echo "sidebar-i-selected";}else{echo "sidebar-i";}?>"><img src="<?php echo $pub;?>assets/events.svg" width="18"/></i> <span class="btn-text">My Events</span>
-      </button>
+      </a>
 
       <button class="btn <?php if($section == "clubs"){ echo "btn-light";}else{echo "btn-outline-light";}?> text-start">
         <i class="<?php if($section == "clubs"){ echo "sidebar-i-selected";}else{echo "sidebar-i";}?>"><img src="<?php echo $pub;?>assets/clubs.svg" width="18"/></i> <span class="btn-text">My Clubs</span>
