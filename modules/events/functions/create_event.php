@@ -20,7 +20,7 @@ function createEvent()
 
   $sql = "insert into sl_events (event_hash, event_name, event_status) values (?,?,?)";
   $q = $pdo->prepare($sql);
-  $q->execute(array($hash, "Tournament Name Goes Here", 1));
+  $q->execute(array($finalhash, "Tournament Name Goes Here", 1));
   $event_id = $pdo->lastInsertId();
 
   $sql = "insert into sl_event_organiser (eo_event, eo_user, eo_status) values (?,?,?)";
