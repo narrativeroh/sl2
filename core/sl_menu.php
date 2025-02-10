@@ -47,9 +47,9 @@
 
 <div class="sidebar d-none d-md-block sidebar-<?php echo strtolower($menu);?>">
   <div class="sidebar-menu  d-grid gap-2 mb-2">
-      <button class="btn <?php if($section == ""){ echo "btn-light";}else{echo "btn-outline-light";}?> text-start">
+      <a class="btn <?php if($section == ""){ echo "btn-light";}else{echo "btn-outline-light";}?> text-start" href="<?php echo $pub;?>organiser/">
         <i class="bi bi-speedometer"></i> <span class="btn-text">Dashboard</span>
-      </button>
+      </a>
       <hr class="sidebar-hr"/>
       <?php
         $sql = "select * from sl_events inner join sl_event_organiser on sl_events.event_id = sl_event_organiser.eo_event where eo_user = ? and eo_status = ? and event_status > 0 and event_status < 5";
@@ -79,6 +79,10 @@
         <i class="<?php if($section == "clubs"){ echo "sidebar-i-selected";}else{echo "sidebar-i";}?>"><img src="<?php echo $pub;?>assets/clubs.svg" width="18"/></i> <span class="btn-text">My Clubs</span>
       </button>
 
+      <a class="btn <?php if($section == "leagues"){ echo "btn-light";}else{echo "btn-outline-light";}?> text-start" href="<?php echo $pub;?>my-leagues/">
+        <i class="<?php if($section == "leagues"){ echo "sidebar-i-selected";}else{echo "sidebar-i";}?>"><img src="<?php echo $pub;?>assets/leagues.svg" width="18"/></i> <span class="btn-text">My Leagues</span>
+      </a>
+
       <button class="btn <?php if($section == ""){ echo "btn-light";}else{echo "btn-outline-light";}?> text-start">
         <i class="bi bi-gear"></i> <span class="btn-text">Settings</span>
       </button>
@@ -105,21 +109,41 @@
     </h2>
     <div id="sidebar-menu-inner" class="accordion-collapse collapse" data-bs-parent="#sidebar-menu">
       <div class="accordion-body">
-        <button class="btn btn-lg btn-outline-light text-start d-block" style="width: 100%; margin-bottom: 10px;">
+        <a class="mb-2 btn btn-lg <?php if($section == ""){ echo "btn-light";}else{echo "btn-outline-light";}?>  text-start d-block" href="<?php echo $pub;?>organiser/">
           <i class="bi bi-speedometer"></i> <span class="btn-text">Dashboard</span>
-        </button>
+        </a>
+        <?php
+        if(!empty($r))
+        {
+          echo "<hr class=\"sidebar-hr\"/>";
+          foreach($r as $row)
+          {
+            $eventname = $row['event_name'];
+            $eventname = (strlen($eventname) > 28) ? substr($eventname,0,25).'...' : $eventname;
+            ?>
+            <a href="<?php echo $pub;?>my-events/?e=<?php echo $row['event_hash'];?>" class="btn btn-lg btn-light text-start d-block text-light" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://localhost:8888/sl2-live/uploads/8/samplebanner.jpg');background-size: cover;">
+              <span><?php echo substr($eventname,0,2);?></span> <span class="btn-text" style="padding-left: 0px; margin-left: -4px;"><?php echo substr($eventname,2,28);?></span>
+            </a>
+            <?php
+          }
+          echo "<hr class=\"sidebar-hr\"/>";
+        }
+      ?>
+        <a class="mb-2 btn btn-lg <?php if($section == "events"){ echo "btn-light";}else{echo "btn-outline-light";}?> text-start d-block" style="width: 100%; margin-bottom: 10px;">
+          <i class="<?php if($section == "events"){ echo "sidebar-i-selected";}else{echo "sidebar-i";}?>"href="<?php echo $pub;?>my-events/"><img src="<?php echo $pub;?>assets/events.svg" width="18"/></i> <span class="btn-text">My Events</span>
+        </a>
 
-        <button class="btn btn-lg btn-light text-start d-block" style="width: 100%; margin-bottom: 10px;">
-          <i class="bi bi-calendar"></i> <span class="btn-text">Events</span>
-        </button>
-        <!--
-        <div class="mobile-sidebar-submenu active">
-          <ul class="nav flex-column">
-            <li class="nav-item"><a href="#">New Event</a></li>
-            <li class="nav-item"><a href="#">All Events</a></li>
-          </ul>
-        </div>
-        -->
+        <a class="mb-2 btn btn-lg <?php if($section == "clubs"){ echo "btn-light";}else{echo "btn-outline-light";}?> text-start d-block">
+          <i class="<?php if($section == "clubs"){ echo "sidebar-i-selected";}else{echo "sidebar-i";}?>"><img src="<?php echo $pub;?>assets/clubs.svg" width="18"/></i> <span class="btn-text">My Clubs</span>
+        </a>
+
+        <a class="mb-2 btn btn-lg <?php if($section == "leagues"){ echo "btn-light";}else{echo "btn-outline-light";}?> text-start d-block" href="<?php echo $pub;?>my-leagues/">
+          <i class="<?php if($section == "leagues"){ echo "sidebar-i-selected";}else{echo "sidebar-i";}?>"><img src="<?php echo $pub;?>assets/leagues.svg" width="18"/></i> <span class="btn-text">My Leagues</span>
+        </a>
+
+        <a class="mb-2 btn btn-lg <?php if($section == ""){ echo "btn-light";}else{echo "btn-outline-light";}?> text-start d-block">
+          <i class="bi bi-gear"></i> <span class="btn-text">Settings</span>
+        </a>
 
       </div>
     </div>
