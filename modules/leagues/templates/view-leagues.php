@@ -38,7 +38,7 @@
 
   <div class="col-md-4 col-lg-3">
     <div class="card">
-      <div class="card-image text-center" style=" height: 150px; background-image: url('<?php echo $pub;?>uploads/8/samplebanner.jpg');background-size: cover;">
+      <div class="card-image text-center rounded-top" style=" height: 150px; background-image: url('<?php echo $pub;?>uploads/8/723-scaled.jpg');background-size: cover;">
       </div>
       <div class="card-body">
         <h5 class="card-title text-white">Sample AOS League</h5>
