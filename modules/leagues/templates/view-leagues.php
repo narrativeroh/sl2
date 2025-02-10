@@ -36,19 +36,30 @@
 
 <div class="row">
 
+  <?php
+  //get leagues
+  $leagues = getLeagues();
+  if($leagues<>"")
+  {
+    foreach($leagues as $lg)
+    {
+      ?>
+
   <div class="col-md-4 col-lg-3">
     <div class="card">
       <div class="card-image text-center rounded-top" style=" height: 150px; background-image: url('<?php echo $pub;?>uploads/8/723-scaled.jpg');background-size: cover;">
       </div>
       <div class="card-body">
-        <h5 class="card-title text-white">Sample AOS League</h5>
+        <h5 class="card-title text-white"><?php echo $lg['league_name'];?></h5>
         <p style="line-height: 0.7rem; font-size: 0.7rem; color: #999999;">Australia<br/>Jul 2025 - Jun 2026</p>
-        <p class="card-text text-warning">This is a warning</p>
+        <?php
+        if($lg['league_status']==1){echo "<p class=\"card-text text-warning\">This league is pending</p>";}
+        ?>
         <div>
           <div class="float-start" style="margin-right: 10px; background-color: #ffcc00; border-radius: 20px; color: #000; width: 30px; height: 30px; text-align: center;"><img src="<?php echo $pub;?>assets/aos.svg" width="20"/></div>
           <div class="float-start" style="padding-top: 4px;">4 Events</div>
         </div>
-        <a href="#" class="float-end btn btn-grad-2">Manage</a>
+        <a href="<?php echo $pub;?>my-leagues/?e=<?php echo $lg['league_hash'];?>" class="float-end btn btn-grad-2">Manage</a>
       </div>
     </div>
   </div>
@@ -74,7 +85,7 @@ function newLeague()
       {
           if(data != "err")
           {
-            $(location).prop('href', '<?php echo $pub;?>leagues/?e='+data);
+            $(location).prop('href', '<?php echo $pub;?>my-leagues/?e='+data);
           }
           else
           {

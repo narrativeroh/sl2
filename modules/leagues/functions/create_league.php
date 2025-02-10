@@ -8,7 +8,7 @@ function createLeague()
   while($finalhash=="")
   {
     $hash = getToken(16);
-    $sql = "select * from sl_leagues where league_hash = ?";
+    $sql = "select * from sl_leagues where league_hash = ? and league_status <> ?";
     $q = $pdo->prepare($sql);
     $q->execute(array($hash, 0));
     $r=$q->fetchAll();
