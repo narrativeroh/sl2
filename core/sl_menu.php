@@ -79,6 +79,10 @@
         <i class="<?php if($section == "clubs"){ echo "sidebar-i-selected";}else{echo "sidebar-i";}?>"><img src="<?php echo $pub;?>assets/clubs.svg" width="18"/></i> <span class="btn-text">My Clubs</span>
       </button>
 
+      <a class="btn <?php if($section == "leagues"){ echo "btn-light";}else{echo "btn-outline-light";}?> text-start" href="<?php echo $pub;?>my-leagues/">
+        <i class="<?php if($section == "leagues"){ echo "sidebar-i-selected";}else{echo "sidebar-i";}?>"><img src="<?php echo $pub;?>assets/leagues.svg" width="18"/></i> <span class="btn-text">My Leagues</span>
+      </a>
+
       <button class="btn <?php if($section == ""){ echo "btn-light";}else{echo "btn-outline-light";}?> text-start">
         <i class="bi bi-gear"></i> <span class="btn-text">Settings</span>
       </button>
