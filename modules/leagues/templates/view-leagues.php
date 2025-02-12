@@ -57,7 +57,7 @@
         ?>
         <div>
           <div class="float-start" style="margin-right: 10px; background-color: #ffcc00; border-radius: 20px; color: #000; width: 30px; height: 30px; text-align: center;"><img src="<?php echo $pub;?>assets/aos.svg" width="20"/></div>
-          <div class="float-start" style="padding-top: 4px;""<?php echo $pub;?>my-leagues/?e=<?php echo $lg['events_qty'];?>"</div>
+          <div class="float-start" style="padding-top: 4px;"><?php echo $lg['league_events_qty'];?> Events</div>
         </div>
         <a href="<?php echo $pub;?>my-leagues/?e=<?php echo $lg['league_hash'];?>" class="float-end btn btn-grad-2">Manage</a>
       </div>
@@ -97,8 +97,9 @@ function newLeague()
             const errToast = document.getElementById('errToast');
             const toastBootstrap = bootstrap.Toast.getOrCreateInstance(errToast);
             toastBootstrap.show()
-          }
-      }
+
+}
+}
   });
 }
 </script>
