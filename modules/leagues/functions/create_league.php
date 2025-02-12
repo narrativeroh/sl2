@@ -18,7 +18,7 @@ function createLeague()
     }
   }
 
-  $sql = "insert into sl_leagues (league_hash, league_name, league_status, league_owner_id) values (?,?,?,?)";
+  $sql = "insert into sl_leagues (league_hash, league_name, league_owner_id, league_status) values (?,?,?,?)";
   $q = $pdo->prepare($sql);
   $q->execute(array($finalhash, "League Name Goes Here", 1));
   $league_id = $pdo->lastInsertId();
