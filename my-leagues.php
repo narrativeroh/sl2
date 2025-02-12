@@ -17,16 +17,18 @@ include $doc."modules/leagues/functions/leagues.php";
 
 if(!empty($_GET['e']))
 {
-  $event = getLeagues($_GET['e']);
-  if(empty($event))
+  $league = getLeagues($_GET['e']);
+  if(empty($league))
   {
-    ?><br/><br/>
-      <div class="text-center">
-        <h1>We seem to have lost this league</h1>
-        <p class="lead">I promise you the league you were looking for was here just a moment ago. It's likely shifted into a parallel universe and hasn't returned yet!</p>
-        <p class="lead">Head back to <a href="<?php echo $pub;?>leagues/" class="text-link">all leagues</a> to find your leagues.</p>
-      </div>
-    <?php
+    ?><br /><br />
+<div class="text-center">
+    <h1>We seem to have lost this league</h1>
+    <p class="lead">I promise you the league you were looking for was here just a moment ago. It's likely shifted into a
+        parallel universe and hasn't returned yet!</p>
+    <p class="lead">Head back to <a href="<?php echo $pub;?>leagues/" class="text-link">all leagues</a> to find your
+        leagues.</p>
+</div>
+<?php
   }
   else {
     if($r[0]['league_status']==1)
