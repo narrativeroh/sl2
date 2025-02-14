@@ -17,7 +17,7 @@ include $doc."modules/leagues/functions/leagues.php";
 
 if(!empty($_GET['e']))
 {
-  $league = getLeagues($_GET['e']);
+  $league = getLeague($_GET['e']);
   if(empty($league))
   {
     ?><br /><br />
@@ -31,7 +31,7 @@ if(!empty($_GET['e']))
 <?php
   }
   else {
-    if($r[0]['league_status']==1)
+    if($league['league_status']==1)
     {
       include $doc."modules/leagues/templates/manage-league.php";
     }

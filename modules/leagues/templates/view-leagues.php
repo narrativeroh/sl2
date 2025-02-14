@@ -88,6 +88,7 @@ function newLeague()
       processData: false,
       success: function(data)
       {
+          console.log(data);
           if(data != "err")
           {
             $(location).prop('href', '<?php echo $pub;?>my-leagues/?e='+data);
