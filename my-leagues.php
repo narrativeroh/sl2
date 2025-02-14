@@ -25,7 +25,7 @@ if(!empty($_GET['e']))
     <h1>We seem to have lost this league</h1>
     <p class="lead">I promise you the league you were looking for was here just a moment ago. It's likely shifted into a
         parallel universe and hasn't returned yet!</p>
-    <p class="lead">Head back to <a href="<?php echo $pub;?>leagues/" class="text-link">all leagues</a> to find your
+    <p class="lead">Head back to <a href="<?php echo $pub;?>my-leagues/" class="text-link">all leagues</a> to find your
         leagues.</p>
 </div>
 <?php

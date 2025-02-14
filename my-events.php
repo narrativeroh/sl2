@@ -24,7 +24,7 @@ if(!empty($_GET['e']))
       <div class="text-center">
         <h1>We seem to have lost this event</h1>
         <p class="lead">I promise you the event you were looking for was here just a moment ago. I bet steve borrowed it and hasn't put it back!</p>
-        <p class="lead">Head back to <a href="<?php echo $pub;?>events/" class="text-link">all events</a> to find your events.</p>
+        <p class="lead">Head back to <a href="<?php echo $pub;?>my-events/" class="text-link">all events</a> to find your events.</p>
       </div>
     <?php
   }
