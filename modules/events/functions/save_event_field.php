@@ -8,14 +8,14 @@ $user = authcheck($mysession);
 $err = "";
 if(!is_array($user))
 {
-  echo "Error: unable to save  #1";
+  echo "Error: unable to save";
   exit();
 }
 
 //Check form submit
 if(empty($_POST['event']) || $_POST['event']=="")
 {
-  echo "Error: unable to save #2";
+  echo "Error: unable to save";
   exit();
 }
 include $doc."modules/events/functions/events.php";
@@ -24,7 +24,7 @@ include $doc."modules/events/functions/events.php";
 $event = getEvent($_POST['event']);
 if(empty($event))
 {
-  echo "Error: unable to save #3";
+  echo "Error: unable to save";
   exit();
 }
 

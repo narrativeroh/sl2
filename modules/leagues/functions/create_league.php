@@ -26,14 +26,6 @@ function createLeague()
     $q = $pdo->prepare($sql);
     $q->execute(array($finalhash, 'Name this league', $user['auth_id'], 1));
 
-    // Get last inserted league ID
-    $league_id = $pdo->lastInsertId();
-
-    // Insert league ownership details
-    $sql = "INSERT INTO sl_league_owner (lo_league, lo_user, lo_status) VALUES (?, ?, ?)";
-    $q = $pdo->prepare($sql);
-    $q->execute(array($league_id, $user['auth_id'], 1));
-    
     return $finalhash;
   }
 ?>
