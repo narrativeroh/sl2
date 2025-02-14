@@ -1,9 +1,29 @@
+<div class="toast-container position-fixed d-flex justify-content-center align-items-center w-100">
+  <div id="errToast" class="toast  bg-danger text-bg-danger" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body">
+      <button type="button" class="btn-close float-end" data-bs-dismiss="toast" aria-label="Close"></button>
+      <div id="errToastText"></div>
+    </div>
+  </div>
+</div>
+<br/>
+
+<div class="toast-container position-fixed d-flex justify-content-center align-items-center w-100">
+  <div id="successToast" class="toast  bg-success text-bg-success" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body">
+      <button type="button" class="btn-close float-end" data-bs-dismiss="toast" aria-label="Close"></button>
+      <div id="successToastText"></div>
+    </div>
+  </div>
+</div>
+<br/>
+
 <!--top banner -->
 <div class="organiser-progress-banner d-flex flex-column min-vh-70" style="background-image: linear-gradient(to right, #0346AE 0%, #DD2476 100%);">
   <div class="d-flex flex-grow-1 justify-content-center align-items-center p-5 text-white">
     <div class="container-fluid">
       <div class="row">
-        <h1><?php echo $event['event_name'];?></h1>
+        <h1 id="event-name-h1"><?php echo $event['event_name'];?></h1>
         <p></p>
       </div>
       <div class="row">
@@ -78,7 +98,7 @@
         <div id="presets" style="float: left; position: absolute; margin-top: -86px;"></div>
         <div class="card">
           <div class="card-header"><h4><i class="bi bi-check-circle-fill text-info"></i> PRESETS</h4></div>
-          <div class="card-body"><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/></div>
+          <div class="card-body"></div>
         </div><br/>
 
         <!-- Go Premium -->
@@ -95,7 +115,22 @@
         <div id="event-info" style="float: left; position: absolute; margin-top: -86px;"></div>
         <div class="card">
           <div class="card-header"><h4><i class="bi bi-exclamation-circle-fill text-danger"></i> EVENT INFO</h4></div>
-          <div class="card-body"><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><bR/><br/><br/><br/><br/><bR/><br/><br/></div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+
+                <!-- event name -->
+                <div class="form-floating mb-3">
+                  <input type="text" maxlength="50" class="autosave form-control" data-sl-field="event_name" id="sl_event_title" placeholder="Event Title" value="<?php echo $event['event_name'];?>">
+                  <label for="floatingInput">Event Title</label>
+                </div>
+
+              </div>
+              <div class="col-md-6">
+
+              </div>
+            </div>
+          </div>
         </div><br/>
 
         <!-- Game System -->
@@ -158,3 +193,52 @@
     </div><!-- End Form -->
   </div>
 </div>
+
+<script>
+//autosave
+var debounce = null;
+$(document).ready(function() {
+    $('.autosave').keyup(function() {
+        clearTimeout(debounce);
+        var $input = $(this);
+        debounce = setTimeout(function(){
+            // SAVE
+            fd = new FormData();
+            fd.append('field', $input.attr('data-sl-field'));
+            fd.append('value', $input.val());
+            fd.append('event', '<?php echo $event['event_hash'];?>');
+            $.ajax({
+                url: '<?php echo $pub;?>modules/events/functions/save_event_field.php',
+                type: 'post',
+                data: fd,
+                contentType: false,
+                processData: false,
+                success: function(data)
+                {
+                    var outcome = data.substring(0,5);
+                    if(outcome != "Error")
+                    {
+                      $('#successToastText').text(data);
+                      const successToast = document.getElementById('successToast');
+                      const toastBootstrap = bootstrap.Toast.getOrCreateInstance(successToast);
+                      toastBootstrap.show();
+
+                      if($input.attr('data-sl-field')=="event_name")
+                      {
+                        $('#event-name-h1').text($input.val());
+                      }
+                    }
+                    else
+                    {
+                      $('#errToastText').text(data);
+                      const errToast = document.getElementById('errToast');
+                      const toastBootstrap = bootstrap.Toast.getOrCreateInstance(errToast);
+                      toastBootstrap.show();
+                    }
+                }
+            });
+
+        }, 1200);
+    });
+});
+</script>
