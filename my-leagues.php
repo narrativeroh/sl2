@@ -33,7 +33,7 @@ if(!empty($_GET['e']))
   else {
     if($league['league_status']==1)
     {
-      include $doc."modules/leagues/templates/manage-league.php";
+      include $doc."modules/leagues/templates/setup-league.php";
     }
   }
 }
