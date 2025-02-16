@@ -16,7 +16,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-6">
-                    <form action="../functions/update_league.php" method="POST">
+                    <form action="<?php echo $pub;?>/modules/leagues/functions/update_league.php" method="POST">
                         <!-- league name -->
                         <div class="form-floating mb-3">
                             <input type="text" maxlength="50" class="autosave form-control" data-sl-field="league_name"
