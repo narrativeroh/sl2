@@ -1,6 +1,6 @@
-function to take the details entered into the setup league form and submit them to the database.
+<!-- function to take the details entered into the setup league form and submit them to the database.
 input = form data as objects
-output = success/fail message
+output = success/fail message -->
 <?php
 function updateLeague()
 
@@ -8,8 +8,9 @@ function updateLeague()
     global $pdo;
     global $user;
 
+// Do I need to GET the right record using $finalhash or will it know which record based on the URL that includes the hash?
 
-    
+//$sql = "SELECT * from sl_leagues where league_hash = ?";
 
 
 // Update league data

@@ -14,7 +14,7 @@ include $doc.'core/sl_head.php';
 include $doc."core/sl_menu.php";
 
 include $doc."modules/leagues/functions/leagues.php";
-
+include $doc.'modules/leagues/functions/update_league.php';
 if(!empty($_GET['e']))
 {
   $league = getLeague($_GET['e']);
