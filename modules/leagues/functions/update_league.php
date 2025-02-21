@@ -18,6 +18,7 @@ $sql = "INSERT INTO sl_leagues (league_name, league_location, league_type, leagu
 $q = $pdo->prepare($sql);
 $q->execute(array('league_name', 'league_location', 'league_type', 'league_description', 'league_start', 'event_criteria1', 'event_criteria2', 'event_criteria3', 'event_criteria4', 'event_criteria5'));
 
-    
+
+ 
 }
 ?>
