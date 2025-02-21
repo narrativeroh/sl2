@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -16,8 +15,8 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-6">
-                    <form action="<?php echo $pub;?>/modules/leagues/functions/update_league.php" method="POST">
-                        <!-- league name -->
+                    <!-- league name -->
+                    <form method="post">
                         <div class="form-floating mb-3">
                             <input type="text" maxlength="50" class="autosave form-control" data-sl-field="league_name"
                                 id="sl_league_title" placeholder="League Title"
@@ -25,12 +24,12 @@
                             <label for="floatingInput">League Title</label>
                         </div>
                         <!-- Game system (selector FROM sl_game_system) Note: by default, only games that match this type will be eligable for league submission-->
-                        <div class="form-floating mb-3">
+                        <!-- <div class="form-floating mb-3">
                             <input type="text" maxlength="50" class="autosave form-control" data-sl-field="league_name"
                                 id="sl_league_title" placeholder="League Title"
                                 value="<?php echo $league['league_name'];?>">
                             <label for="floatingInput">Game System Dropdown</label>
-                        </div>
+                        </div> -->
                         <!-- league location (country or online aka worldwide)-->
                         <div class="form-floating mb-3">
                             <input type="text" maxlength="50" class="autosave form-control"
@@ -40,8 +39,8 @@
                         </div>
                         <!-- League type (selector open competition -or- limited series)-->
                         <div class="form-floating mb-3">
-                            <input type="text" maxlength="50" class="autosave form-control" data-sl-field="league_type"
-                                id="sl_league_type" placeholder="League Type"
+                            <input type="number" maxlength="50" class="autosave form-control"
+                                data-sl-field="league_type" id="sl_league_type" placeholder="1"
                                 value="<?php echo $league['league_type'];?>">
                             <label for="floatingInput">League Type</label>
                         </div>
@@ -53,28 +52,28 @@
                             <label for="floatingInput">League Description</label>
                         </div>
                         <!-- Start date (datepicker) -->
-                        <div class="form-floating mb-3">
+                        <!-- <div class="form-floating mb-3">
                             <input type="text" maxlength="50" class="autosave form-control" data-sl-field="league_start"
                                 id="sl_league_start" placeholder="League Start Date"
                                 value="<?php echo $league['league_start'];?>">
                             <label for="floatingInput">Start Date</label>
-                        </div>
+                        </div> -->
                         <!-- Season length (duration: selector 3, 6, 12, 18, 24 months -or- qty of events: INT)-->
-                        <div class="form-floating mb-3">
+                        <!-- <div class="form-floating mb-3">
                             <input type="text" maxlength="50" class="autosave form-control" data-sl-field="league_name"
                                 id="sl_league_title" placeholder="League Title"
                                 value="<?php echo $league['league_name'];?>">
                             <label for="floatingInput">Season Length</label>
-                        </div>
+                        </div> -->
                 </div>
                 <div class="col-md-6">
                     <!-- league image (image upload) -->
-                    <div class="form-floating mb-3">
+                    <!-- <div class="form-floating mb-3">
                         <input type="text" maxlength="50" class="autosave form-control" data-sl-field="league_name"
                             id="sl_league_title" placeholder="League Title"
                             value="<?php echo $league['league_name'];?>">
                         <label for="floatingInput">Image Upload</label>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -130,9 +129,28 @@
         </div>
     </div><br />
     <div>
-        <button>Submit</button>
+        <button type="submit" name="submit">Submit</button>
     </div>
     </form>
+
+    <?php
+    if (isset($_POST['submit'])) {updateLeague('league_name', 'league_location', 'league_type', 'league_description', 
+        'event_criteria1', 'event_criteria2', 'event_criteria3', 'event_criteria4', 'event_criteria5');}
+  
+function updateLeague(){
+global $pdo;
+
+echo "<p>Button Clicked</p>";
+        
+        $sql =
+        "INSERT INTO sl_leagues (league_name, league_location, league_type, league_description, event_criteria1, event_criteria2, event_criteria3, event_criteria4, event_criteria5) VALUES (?,?,?,?,?,?,?,?,?)";
+        $q = $pdo -> prepare($sql);
+        $q -> execute (array('league_name', 'league_location', 'league_type', 'league_description', 
+        'event_criteria1', 'event_criteria2', 'event_criteria3', 'event_criteria4', 'event_criteria5'));
+    
+    }
+?>
 </body>
+
 
 </html>
